@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from moltran.coderthemes.com/dark/pages-login.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Sep 2017 02:42:19 GMT -->
+<head>
+   
+        <meta charset="utf-8" />
+        <title>Moltran - Responsive Admin Dashboard Template</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+        <meta content="Coderthemes" name="author" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <link rel="shortcut icon" href="images/favicon_1.ico">
+
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/core.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/icons.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/components.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/pages.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/menu.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/responsive.css" rel="stylesheet" type="text/css">
+
+        <script src="assets/js/modernizr.min.js"></script>
+
+         <link href="assets/plugins/modal-effect/css/component.css" rel="stylesheet">
+         
+          <link href="assets/css/components.css" rel="stylesheet" type="text/css">
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+        <script type="text/javascript" src="js/sesion.js"></script>
+        <script type="text/javascript" src="js/ruta.js"></script>
+<style type="text/css">
+    body{
+            background:url('imgages/fondo.jpg');
+  background-repeat:no-repeat;
+  background-size:cover;
+  font-size: 13px;
+    color: #FFFFFF;
+        }
+ 
+</style>
+        
+    </head>
+    <body >
+
+
+        <div class="wrapper-page">
+            <div class="panel panel-color panel-primary panel-pages">
+              <!--  <div class="panel-heading bg-img"> 
+                    <div class="bg-overlay"></div>
+                    <h3 class="text-center m-t-10 text-white"> Sign In to <strong>Moltran</strong> </h3>
+                </div> -->
+
+
+             
+              <br>
+                <div align="center"><img src="./images/logoufps.png"  WIDTH=84 HEIGHT=84 ALT="Obra de K. Haring"></div>
+                <div class="panel-body">
+                <form id="login-form" class="form-horizontal m-t-20" action="http://moltran.coderthemes.com/dark/index.html">
+                    
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <input id="cod" class="form-control input-lg" type="text" required="" placeholder="Codigo">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <input id="con" class="form-control input-lg" type="password" required="" placeholder="Contraseña">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                          <select id="tip" class="form-control">
+                                                        <option value="1">Profesor</option>
+                                                        <option value="0">Alumno</option>
+                          </select>
+                            
+                        </div>
+                        
+                      
+                    </div>
+                    
+                    <div class="form-group text-center m-t-40">
+                        <div class="col-xs-12">
+                            <button id="login-form-button" class="btn btn-primary btn-lg w-lg waves-effect waves-light" type="submit">Iniciar</button>
+                        </div>
+                    </div>
+
+                  <!--  <div class="form-group m-t-30">      </div>-->
+                  
+               
+                        <div style="cursor:pointer" class="col-sm-12 text-center" >
+                            <a data-toggle="modal" data-target="#con-close-modal">Registrar Cuenta</a>
+                        </div>
+                  <br>
+                        <div style="cursor:pointer" class="col-sm-12 text-center">
+                            <a  data-toggle="modal" data-target=".bs-example-modal-sm"><i class="fa fa-lock m-r-5"></i>Recuperar Clave?</a>
+                        </div>
+                         
+                </form> 
+                </div>                                 
+                
+                   
+                <!------------------------------------------ Inicio Modal de Registro De Usuario Nuevo ---------------------------------->     
+
+
+
+                <div id="con-close-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none">
+                    <div class="modal-dialog"> 
+                        <div class="modal-content"> 
+                            <div class="modal-header"> 
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> 
+                                <h4 class="modal-title">Registro de Usuarios Nuevos</h4> 
+                            </div> 
+                            <div class="modal-body"> 
+
+                                <div class="row"> 
+                                    <div class="col-md-12"> 
+                                        <div class="form-group"> 
+                                            <label for="field-3" class="control-label">Seleccione</label> 
+                                            <select id="tipo" class="form-control">
+                                                <option value="1">Profesor</option>
+                                                <option value="0">Alumno</option>
+                                            </select>
+                                        </div> 
+                                    </div> 
+                                </div> 
+
+                                <div class="row"> 
+                                    <div class="col-md-6"> 
+                                        <div class="form-group"> 
+                                            
+                                            <label for="field-1" class="control-label">Nombre</label> 
+                                            <input id="nombre" type="text" class="form-control" id="field-1" placeholder="John"> 
+                                        </div> 
+                                    </div> 
+                                    <div class="col-md-6"> 
+                                        <div class="form-group"> 
+                                            <label for="field-2" class="control-label">Apellido</label> 
+                                            <input id="apellido" type="text" class="form-control" id="field-2" placeholder="Doe"> 
+                                        </div> 
+                                    </div> 
+                                </div> 
+
+                                <div class="row"> 
+                                    <div class="col-md-6"> 
+                                        <div class="form-group"> 
+                                            <label for="field-1" class="control-label">Codigo</label> 
+                                            <input id="codigo" type="text" class="form-control" id="field-1" placeholder="11XXXXX"> 
+                                        </div> 
+                                    </div> 
+                                    <div class="col-md-6"> 
+                                        <div class="form-group"> 
+                                            <label for="field-2" class="control-label">Contraseña</label> 
+                                            <input id="contrasena" type="password" class="form-control" id="field-2" placeholder="xxxxxxxxxx"> 
+                                        </div> 
+                                    </div> 
+                                </div> 
+
+                                <div class="row"> 
+                                    <div class="col-md-12"> 
+                                        <div class="form-group"> 
+                                            <label for="field-3" class="control-label">Correo</label> 
+                                            <input id="correo" type="email" class="form-control" id="field-3" placeholder="juan@ufps.edu.co"> 
+                                        </div> 
+                                    </div> 
+                                </div> 
+
+                            </div> 
+                            <div class="modal-footer"> 
+                                <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cerrar</button> 
+                                <button onclick="registrar()" type="button" class="btn btn-info waves-effect waves-light">Registrar</button> 
+                            </div> 
+                        </div> 
+                    </div>
+                </div><!-- /.modal -->
+
+
+
+                                        <!------------------------------------------ F Modal de Registro De Usuario Nuevo ---------------------------------->       
+
+                                        <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style="display: none">
+                                            <div class="modal-dialog modal-sm">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                        <h4 class="modal-title" id="mySmallModalLabel">Recuperar Contraseña</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        Favor Comunicarse Con el Administrador de la Aplicacion...
+                                                    </div>
+                                                </div><!-- /.modal-content -->
+                                            </div><!-- /.modal-dialog -->
+                                        </div><!-- /.modal -->
+
+            
+            
+            
+            </div>
+        </div>
+
+        
+    	<script>
+            var resizefunc = [];
+        </script>
+       
+
+        <!-- Main  -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/detect.js"></script>
+        <script src="assets/js/fastclick.js"></script>
+        <script src="assets/js/jquery.slimscroll.js"></script>
+        <script src="assets/js/jquery.blockUI.js"></script>
+        <script src="assets/js/waves.js"></script>
+        <script src="assets/js/wow.min.js"></script>
+        <script src="assets/js/jquery.nicescroll.js"></script>
+        <script src="assets/js/jquery.scrollTo.min.js"></script>
+
+        <script src="assets/js/jquery.app.js"></script>
+        
+          <script src="assets/plugins/modal-effect/js/classie.js"></script>
+        <script src="assets/plugins/modal-effect/js/modalEffects.js"></script>
+	<script type="text/javascript">
+      var t="";
+            $(document).ready(function () {
+                if(getCookie("user") != ""){
+                    redireccionar(getCookie("tipo"));                 
+                }                
+            });
+
+            $('#login-form').on("submit",function(e){
+                e.preventDefault();                  
+                obtenerRuta("iniciar");           
+                iniciarSesion();
+            });
+
+            function redireccionar(dir){
+                switch(dir){
+                    case 0:
+                    window.location.href = "html/page_Alumno.html"
+                    break;
+                    default :
+                    window.location.href = "html/page_Docente.html"
+                   }    
+            }
+
+            function iniciarSesion(){
+                var var1 = $("#cod").val();
+                var var2 = $("#con").val();
+                var var3 = $("#tip").val();
+                window.setTimeout(function(){
+                var s = document.createElement("script");  
+                var parametros = {"cod":var1,"con":var2,"tip":var3};                 
+                s.src = window.t+"?x="+JSON.stringify(parametros);
+                document.body.appendChild(s);
+                }, 600);
+                        
+            }
+
+            function algo(){
+                  obtenerRuta("registrar");
+                  console.log(window.t);
+            }
+
+              function registrar(){
+                obtenerRuta("registrar");
+                var var1 = $("#tipo").val();
+                var var2 = $("#nombre").val();
+                var var3 = $("#apellido").val();
+                var var4 = $("#codigo").val();
+                var var5 = $("#contrasena").val();
+                var var6 = $("#correo").val();              
+                window.setTimeout(function(){
+                    var s = document.createElement("script"); 
+                    var parametros = {"tipo": var1,"nombre": var2,"apellido": var3,"codigo":var4,"contrasena":var5,"correo": var6
+                     };                                   
+                    s.src = window.t+"?x="+JSON.stringify(parametros);
+                    document.body.appendChild(s);
+                }, 1000);
+            }
+
+
+            function procesar(myObj){
+                if(myObj["error"]==0){                   
+                    document.cookie = "user="+myObj["id_user"];
+                    document.cookie = "tipo="+myObj["tipo"];
+                    redireccionar(myObj["tipo"]);
+                }else if(myObj["error"]==1){
+                    alert("Alguna de las credenciales debe estar mal");
+                }else{
+                    alert("Creo que tienes problemas");
+                }
+            }   
+
+            function procesarRegistro(res){
+                if(res["error"]==0){
+                    window.location.href="index.html";
+                }else if(res["error"]==1){
+                    alert("Es posible que tus credenciales ya esten ocupadas");
+                    console.log("Lo que retorno el pdo error"+res["traza"]);
+                }
+            }
+    </script>
+	</body>
+
+<!-- Mirrored from moltran.coderthemes.com/dark/pages-login.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Sep 2017 02:42:19 GMT -->
+</html>

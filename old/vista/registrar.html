@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="js/sesion.js"></script>
+        <script type="text/javascript" src="js/ruta.js"></script>
+    </head>
+    <body>
+        <div>Registrar</div>
+        <form id="registrer-form">
+            <input type="text"  id="nombre" placeholder="Nombre"> 
+            <input type="text"  id="apellido" placeholder="Apellido"> 
+            <input type="text" id="codigo" placeholder="codigo"> 
+            <input type="password"  id="contrasena" placeholder="contrasena"> 
+            <input type="email"  id="correo" placeholder="micorreo@ufps.edu.co"> 
+            <select id="tipo">
+                <option value="1">Profesor</option>
+                <option value="0">Alumno</option>
+            </select>
+            <button id="registrer-form-button">Registrar</button> 
+            </form>
+        <div id="res"></div>
+
+        <script>
+            var t = "";
+
+            $('#registrer-form').on("submit",function(e){
+                e.preventDefault(); 
+                obtenerRuta("registrar");
+                registrar();
+            });
+
+            function registrar()
+            {
+                var var1 = $("#tipo").val();
+                var var2 = $("#nombre").val();
+                var var3 = $("#apellido").val();
+                var var4 = $("#codigo").val();
+                var var5 = $("#contrasena").val();
+                var var6 = $("#correo").val();              
+                window.setTimeout(function(){
+                    var s = document.createElement("script"); 
+                    var parametros = {"tipo": var1,"nombre": var2,"apellido": var3,"codigo":var4,"contrasena":var5,"correo": var6
+                     };                                   
+                    s.src = window.t+"?x="+JSON.stringify(parametros);
+                    document.body.appendChild(s);
+                }, 1000);
+            }
+
+            function procesarRegistro(res){
+                if(res["error"]==0){
+                    window.location.href="index.html";
+                }else if(res["error"]==1){
+                    alert("Cuidado debes tener algo mal, posiblemente ese codigo ya existe");
+                    console.log("Lo que retorno el pdo error"+res["traza"]);
+                }
+            }
+
+        </script>
+    </body>
+</html>

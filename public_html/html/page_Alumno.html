@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from moltran.coderthemes.com/dark/ui-tabs-accordions.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Sep 2017 02:40:20 GMT -->
+<head>
+        <meta charset="utf-8" />
+        <title>Moltran - Responsive Admin Dashboard Template</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+        <meta content="Coderthemes" name="author" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <link rel="shortcut icon" href="../assets/images/favicon_1.ico">
+        
+        <!-- Custom Files -->
+        <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="../assets/css/core.css" rel="stylesheet" type="text/css">
+        <link href="../assets/css/icons.css" rel="stylesheet" type="text/css">
+        <link href="../assets/css/components.css" rel="stylesheet" type="text/css">
+        <link href="../assets/css/pages.css" rel="stylesheet" type="text/css">
+        <link href="../assets/css/menu.css" rel="stylesheet" type="text/css">
+        <link href="../assets/css/responsive.css" rel="stylesheet" type="text/css">
+
+        <script src="../assets/js/modernizr.min.js"></script>
+        
+        
+        <link type="text/css" rel="stylesheet" href="../css/hover-min.css"> <!--efecto del calendario del cuadro -->
+        <link type="text/css" rel="stylesheet" href="../css/custom1.css">
+        
+      <!--  <link type="text/css" rel="stylesheet" href="../assets/css/hover-min.css"> efecto del calendario del cuadro 
+        <link type="text/css" rel="stylesheet" href="../assets/custom1.css">-->
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+
+
+    <body class="fixed-left">
+        
+        <!-- Begin page -->
+        <div id="wrapper">
+        
+            <!-- Top Bar Start -->
+            <div class="topbar">
+                <!-- LOGO 
+                <div class="topbar-left">
+                    <div class="text-center">
+                        <a href="index.html" class="logo"><i class="md md-terrain"></i> <span>Moltran </span></a>
+                    </div>
+                </div>-->
+                <!-- Button mobile view to collapse sidebar menu -->
+                <div class="navbar navbar-default" role="navigation">
+                    <div class="container">
+                        <div class="">
+                         
+                           
+                            <ul class="nav navbar-nav navbar-right pull-right">
+                                <li class="dropdown hidden-xs">
+                                    <a href="#" data-target="#" class="dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="true">
+                                       Bienvenido
+                                        Nombre de Usuario
+                                    </a>
+                                
+                                </li>
+                             
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="../assets/images/users/avatar-1.jpg" alt="user-img" class="img-circle"> </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0)"><i class="md md-face-unlock"></i> Profile</a></li>
+                                        <li><a href="javascript:void(0)"><i class="md md-settings"></i> Settings</a></li>
+                                        <li><a href="javascript:void(0)"><i class="md md-lock"></i> Lock screen</a></li>
+                                        <li><a href="javascript:void(0)"><i class="md md-settings-power"></i> Logout</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--/.nav-collapse -->
+                    </div>
+                </div>
+            </div>
+            <!-- Top Bar End -->
+
+
+            
+            <form>
+
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->                      
+            <div class="content-page">
+                <!-- Start content -->
+                <div class="content">
+                    <div class="container">
+
+                        <!-- Page-Title -->
+                        <div class="row">
+                            <div  class="col-sm-12">
+                                <h4 class="pull-left page-title col-8 col-sm-6">Recordar: Las clases vienen por horas, toca cuadrar eso</h4>
+                                
+                                <div class="col-4 col-sm-6" align="right">
+                                    	<div class="btn-group dropdown ">
+                                            <button type="button" class="btn btn-danger waves-effect waves-light" onclick="pintarTablaPrincipal(-1)">Horario de hoy</button>
+                                            <button type="button" class="btn btn-danger dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="false"><i class="caret"></i></button>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li><a onclick="pintarTablaPrincipal(1)">Lunes</a></li>
+                                                <li><a onclick="pintarTablaPrincipal(2)">Martes</a></li>
+                                                <li><a onclick="pintarTablaPrincipal(3)">Miércoles</a></li>
+                                                <li><a onclick="pintarTablaPrincipal(4)">Jueves</a></li>
+                                                <li><a onclick="pintarTablaPrincipal(5)">Viernes</a></li>
+                                                <li><a onclick="pintarTablaPrincipal(6)">Sábado</a></li>
+                                            </ul>
+                                        </div>
+                                        <br></br>
+                                    </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row"> 
+                        <div class="col-lg-4"> 
+                        
+                        <table class='table table-bordered table-hover table-striped table-condensed no-margin'>
+                        <thead>
+                        	<th colspan="2"> Siguiente clase</th>
+                        </thead>
+                        <tbody>
+                        	<tr>
+                        	<td id="HS" align="center" width="45%">
+                        	<!--
+                        	<br>
+                                <b>6:00 am</b><br>
+                        	-->
+                        	</td>
+                        	<td id="DS" align="center" width="55%">
+                        	<!--
+                        	<span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <br>
+                                                                    <b>1155101-B</b><br>
+                                                                    <font class='boxtitle2'>Cálculo diferencial<br>  <br></font>
+                                                                    
+                                                                </span>
+                            -->
+                            </td>
+                            </tr>
+                        </tbody>
+                        </table>
+
+                        <button type="button" class="btn btn-block btn--md btn-danger waves-effect waves-light" data-toggle="modal" data-target="#con-close-modal">Agregar materia</button>
+                        <button type="button" class="btn btn-block btn--md btn-danger waves-effect waves-light" data-toggle="modal" data-target="#con-close-modal-1">Eliminar materia</button>
+                        <br>
+                        
+                        <!--<span class="dropcap text-danger">¿Puede haber algo aquí?</span>-->
+                        <br>
+						<div class="container">
+						<br><br>
+							<div class="col-12">
+                                                <h5>¿Esta lista puede contar cuántas hay de cada tipo?</h5>
+                                                <ul class="list-group">
+                                                    <li class="list-group-item">
+                                                        <span id="contVerde" class="badge badge-success" style="width:30px">0</span>
+                                                        Clases programadas
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <span id="contAmarillo" class="badge badge-warning" style="width:30px">0</span>
+                                                        Clases retrasadas
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <span id="contRojo" class="badge badge-danger" style="width:30px">0</span>
+                                                        Clases canceladas
+                                                    </li>
+                                                </ul>
+                                            </div>
+						</div>
+                        </div>
+                            <div class="col-12 col-lg-8"> 
+                               
+                                <div class="tab-content" > 
+                                    
+                                       <div class="tab-pane active" id="clases"> 
+                                        
+                                         <div class="box-body no-padding">
+                                            <div class="table-responsive" style=" height: 425px;
+    overflow-y: scroll;">
+                                                <table id="mainTable" class='table table-bordered table-hover table-striped table-condensed no-margin'>
+                                                    <thead >
+                                                        <tr>
+                                                            <th>Horasss</th>
+                                                            <th id="TEncabezado">Dia de Hoy</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="mainTBody">
+                                                    </tbody>
+                                                </table>
+                                           
+
+                                        </div> <!-- End Row    </div> -->
+                                        </div> 
+                                        
+                                    </div> 
+                                    
+                                    <div class="tab-pane " id="home"> 
+                                        
+                                          <div class="box-body no-padding">
+                                            <div class="table-responsive">
+                                                
+                                           
+
+                                        </div> <!-- End Row    </div> -->
+                                        </div> 
+                                        
+                                         </div> 
+                                    
+                                 
+                                    
+                                    <div class="tab-pane " id="profile"> 
+                                        
+                                         <div class="box-body no-padding">
+                                            <div class="table-responsive">                 
+                                            </div> <!-- End Row    </div> -->
+                                        </div> 
+                                        
+                                    </div> 
+                                   
+                                </div> 
+                            </div> 
+
+                          
+                        </div>
+                         <!-- end row -->
+               </div> <!-- container -->
+                               
+                </div> <!-- content -->
+
+                <footer class="footer">
+                    2016 © Moltran.......
+                </footer>
+
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Right content here -->
+            <!-- ============================================================== -->
+
+</form>
+            
+            <!-- ------------------------------------- Inicio Modal de Registro De Materias -->
+            <!-- ------------------------------ -->     
+
+
+
+                <div id="con-close-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none">
+                    <div class="modal-dialog"> 
+                        <form id="myForm" metod="post">
+                            <div class="modal-content"> 
+                                <div class="modal-header"> 
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> 
+                                    <h4 class="modal-title">Registro de Materias</h4> 
+                                </div> 
+                                <div class="modal-body"> 
+
+                                    <div>
+                                        <div class="row"> 
+                                            <div class="col-md-12"> 
+                                                <div class="form-group"> 
+                                                    <label for="field-1" class="control-label">Codigo de la Materia</label> 
+                                                    <input type="text" class="form-control" id="codigo" placeholder="1151XXX-A"> 
+                                                </div> 
+                                            </div> 
+                                          <!--  <div class="col-md-6"> 
+                                                <div class="form-group"> 
+                                                    <label for="field-2" class="control-label">Grupo</label> 
+                                                    <input type="text" class="form-control" id="grupo" placeholder="A"> 
+                                                </div> 
+                                            </div> -->
+                                            
+                                        </div> 
+
+                                    </div>
+
+                            </div> 
+                            <div class="modal-footer"> 
+                                <br>
+                                <button type="button" class="btn btn-danger btn-custom waves-effect waves-light"  data-dismiss="modal">Cerrar</button> 
+                                <button type="button" class="btn btn-danger waves-effect waves-light">Registrar</button> 
+                            </div> 
+                        </div> 
+                        
+                        </form>
+                    </div>
+                </div><!-- /.modal -->
+
+
+           <!-----------------------------Modal eliminar Materias---------------------------------------->
+           
+               <div id="con-close-modal-1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none">
+                    <div class="modal-dialog"> 
+                        <form id="myForm" metod="post">
+                            <div class="modal-content"> 
+                                <div class="modal-header"> 
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> 
+                                    <h4 class="modal-title">Eliminar de Materias</h4> 
+                                </div> 
+                                <div class="modal-body"> 
+
+                                    <div>
+                                        <div class="row"> 
+                                            <div class="col-md-12"> 
+                                                <div class="form-group"> 
+                                                    <label for="field-1" class="control-label">Codigo</label> 
+                                                    <input type="text" class="form-control" id="codigo" placeholder="1151XXX"> 
+                                                </div> 
+                                            </div> 
+                                           <!-- <div class="col-md-6"> 
+                                                <div class="form-group"> 
+                                                    <label for="field-2" class="control-label">Grupo</label> 
+                                                    <input type="text" class="form-control" id="grupo" placeholder="A"> 
+                                                </div> 
+                                            </div> -->
+                                        </div> 
+
+                                    </div>
+
+                            </div> 
+                            <div class="modal-footer"> 
+                                <br>
+                               <!-- <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cerrar</button> -->
+                                <button type="button" class="btn btn-danger btn-custom waves-effect waves-light" data-dismiss="modal">Cerrar</button> 
+                                <button type="button" class="btn btn-danger waves-effect waves-light">Eliminar</button> 
+                            </div> 
+                        </div> 
+                        
+                        </form>
+                    </div>
+                </div><!-- /.modal -->
+           
+           <!-----------------------------Modal eliminar Materias---------------------------------------->
+           
+
+
+        </div>
+        <!-- END wrapper -->
+    
+        <script>
+            var resizefunc = [];
+            var arrayMaterias;
+        </script>
+
+        <!-- CUSTOM JS -->
+        <script src="../assets/js/jquery.min.js"></script>
+        <script src="../assets/js/bootstrap.min.js"></script>
+        <script src="../assets/js/detect.js"></script>
+        <script src="../assets/js/fastclick.js"></script>
+        <script src="../assets/js/jquery.slimscroll.js"></script>
+        <script src="../assets/js/jquery.blockUI.js"></script>
+        <script src="../assets/js/waves.js"></script>
+        <script src="../assets/js/wow.min.js"></script>
+        <script src="../assets/js/jquery.nicescroll.js"></script>
+        <script src="../assets/js/jquery.scrollTo.min.js"></script>
+
+        <script src="../assets/js/jquery.app.js"></script>
+        
+        
+        	<script type="text/javascript">
+
+        	$(document).ready(function(){
+                var t = obtenerRuta("consultarMateria");
+        		window.setTimeout(function(){
+                var s = document.createElement("script");  
+                var var1 = getCookie("user");
+                var parametros = {"codigo":var1};                 
+                s.src = window.t+"?x="+JSON.stringify(parametros);
+                document.body.appendChild(s);
+                }, 600);
+
+
+
+        	});
+
+
+            function setarrayMateria(myObj){
+
+                window.arrayMaterias = myObj;
+
+
+            }
+
+
+	var count=0;
+		function agregar_d(dias){
+			var option = document.createElement("option");
+			option.text = "Lunes";
+			dias.add(option); 
+			option = document.createElement("option");
+			option.text = "Martes";
+			dias.add(option);
+			option = document.createElement("option");
+			option.text = "Miércoles";
+			dias.add(option);
+			option = document.createElement("option");
+			option.text = "Jueves";
+			dias.add(option);
+			option = document.createElement("option");
+			option.text = "Viernes";
+			dias.add(option);
+			option = document.createElement("option");
+			option.text = "Sábado";
+			dias.add(option);
+			dias.setAttribute("id", "d%"+count);
+			return dias;
+		}
+		function agregar_h(horas,state){
+			for (var i = 6; i < 23; i++) {
+				var option = document.createElement("option");
+				//option.value=i;
+				option.text = i;
+				horas.add(option); 
+				}
+				horas.setAttribute("id", state+"%"+count);
+			return horas;
+		}
+		function agregar(divId){
+			var dias = document.createElement("SELECT");
+			var start = document.createElement("SELECT");
+			var end = document.createElement("SELECT");
+			var lbl = document.createElement("LABEL");
+			lbl.setAttribute("id","lbl%"+count);
+			var btn = document.createElement("BUTTON");
+			btn.setAttribute("id","btn%"+count);
+			btn.innerText="Eliminar";
+			btn.setAttribute("type","button");
+			btn.setAttribute("onclick","eliminar(this)");
+			dias=agregar_d(dias);
+			start=agregar_h(start,"s"); 
+			end=agregar_h(end,"e"); 
+			end.value="7";
+			var container=document.createElement("DIV");
+			container.setAttribute("id","div%"+count);
+			var div =document.getElementById(divId);
+    		container.appendChild(dias);
+    		container.appendChild(start);
+    		container.appendChild(end);
+    		container.appendChild(btn);
+    		container.appendChild(lbl);
+			div.appendChild(container);
+			count++;
+			validarHorario();						
+		}
+		function eliminar(btn){ 
+			var aux=btn.getAttribute("id").split("%");
+			var id=aux[1];
+			document.getElementById("div%"+id).remove();
+		}
+		function validarHorario(){
+			for(var i=0;i<count;i++){
+				var lbl=document.getElementById("lbl%"+i);
+					if(lbl!=null){
+						lbl.innerText="";
+					}
+			}
+			var respuesta=true;
+			for(var i=0;i<count;i++){
+				var di=document.getElementById("d%"+i);
+				var si=document.getElementById("s%"+i); //start
+				var ei=document.getElementById("e%"+i); //end
+				if(di!=null){
+					di=di.value;
+					si=si.value;
+					ei=ei.value;
+					if(si>=ei){
+						document.getElementById("lbl%"+i).innerText="otro mensaje";
+						respuesta= false;
+					}
+				for(var j=i+1;j<count;j++){
+					var dj=document.getElementById("d%"+j);
+					var sj=document.getElementById("s%"+j);
+					var ej=document.getElementById("e%"+j);
+					if(dj!=null){
+						dj=dj.value;
+						sj=sj.value;
+						ej=ej.value;
+						if(di==dj){
+							if(si>=sj && si<=ej){
+								document.getElementById("lbl%"+j).innerText="nel perro >:c";
+								respuesta=false;
+							}
+							if(ei>sj && ei<=ej){
+								document.getElementById("lbl%"+j).innerText="nel perro >:c";
+								respuesta=false;
+							}
+						}
+					}
+				}
+			}
+			}
+			return respuesta;
+		}
+		function validar(){
+			var rta=true;
+			if(document.getElementById("codigo").value=="")rta=false;
+			if(document.getElementById("nombre").value=="")rta=false;
+			return rta;
+		}		
+		function preparar_datos(div){
+			rta= new Array();
+			var d=document.getElementById(div);
+			var divhijos=d.childNodes;
+			for(var i=3;i<divhijos.length;i++){ //mirar en el html, el div se inicializa con text-button-text
+				var selects=divhijos[i].childNodes;
+					rta.push(selects[0].value+"/"+
+							selects[1].value+"/"+
+							selects[2].value);
+			}
+			return rta;
+		}
+		function enviar(){
+			if(validar()){
+			if(validarHorario()){
+				var clases=preparar_datos("clase");
+				var asesorias=preparar_datos("asesoria");
+				if(clases.length>0 || asesorias.length>0){
+					var env= [clases,"%",asesorias];
+					alert(env);
+			}else{
+				alert("(-.-) el horario está vacio... (-.-)");
+			}
+			}else{
+				alert("¡Wow! ¡El super profe puede dictar dos clases al tiempo!");
+			}
+			}else {
+			alert("No somos adivinos, faltan los datos de la materia");
+		}
+		}
+/* 
+*
+*
+*DE AQUÍ PARA ABAJO YA NO TIENE QUE VER CON AGREGAR
+*
+*
+* SIGUEN LAS FUNCIONES PARA PINTAR
+*
+*
+*/
+
+
+
+
+function getMateria(dia,hora){
+	var estado=2;
+	var nombre="Introducción a la vagancia";
+	//var nombre="Cálculo diferencial";
+	var codigo="1151345-A";
+	var salon="SA 400";
+	var isClase="Clase";
+
+	var obj="";
+	//var obj=null; //puede eliminarse, solo para pruebas
+	/*...
+
+									TRATAR EL OBJ AQUÍ
+	
+	*/
+	if(obj!=null){ //?
+	var span=document.createElement("SPAN");
+	var clase="badge hvr-grow-shadow badge_pen td_color";
+	clase+=colorPorEstado(estado);
+	span.setAttribute("class",clase);
+	span.setAttribute("data-toggle","tooltip");
+	span.setAttribute("data-placement","top");
+	span.setAttribute("title",nombre);
+	span.setAttribute("style","width:150px");
+	span.innerHTML="<br><b>"+codigo+"</b><br><font class='boxtitle2'>"+nombre+"<br>"+salon+" "+isClase+"<br><br></font>";
+	span.setAttribute("onclick","alert('Menú')");
+	}else{
+		var span=document.createTextNode("-");
+	}
+	return span;
+    
+}
+	function siguienteClase(){
+		var date = new Date();
+		var h=date.getHours();
+		var d=date.getDay(); //días del 0 al 6... el 0 es domingo
+		//document.write(d+" -- "+h);
+		document.getElementById("HS").innerHTML="<br><b>"+h+":00</b><br>";
+		document.getElementById("DS").innerHTML=getMateria(d,h);
+		
+	}
+	function pintarTablaPrincipal(dia){
+		document.getElementById("contRojo").innerText=0;
+		document.getElementById("contVerde").innerText=0;
+		document.getElementById("contAmarillo").innerText=0;
+		//pinta celda por celda, buscando por día y hora  ¡EASY!
+		if(dia==-1){ //búsqueda de día actual
+			var date = new Date();
+			dia=date.getDay();
+		}
+		if(dia==0){
+			dia=1; //protección contra domingos. supongo _/(0.0)\_
+		}
+		var TEncabezado=document.getElementById("TEncabezado");
+		var day="";
+		switch(dia){
+    case 1:
+        day = "Lunes";
+        break;
+    case 2:
+        day = "Martes";
+        break;
+    case 3:
+        day = "Miércoles";
+        break;
+    case 4:
+        day = "Jueves";
+        break;
+    case 5:
+        day = "Viernes";
+        break;
+    case 6:
+        day = "Sábado";
+		}
+		TEncabezado.innerText=day;
+		var TBody=document.getElementById("mainTBody");
+		for (var i=6;i<23;i++){
+			var trPasado=document.getElementById("tr"+i);
+			var tr =document.createElement("TR");
+			tr.setAttribute("id","tr"+i);
+			var tdHora =document.createElement("TD");
+			tdHora.setAttribute("align","center");
+			tdHora.setAttribute("width","50%");
+			tdHora.innerHTML="<br><b>"+i+":00</b><br>"
+			var tdMateria =document.createElement("TD");
+			tdMateria.setAttribute("align","center");
+			tdMateria.setAttribute("width","50%");
+			var span=getMateria(dia,i);
+			tdMateria.appendChild(span);
+			tr.appendChild(tdHora);
+			tr.appendChild(tdMateria);
+			if(trPasado!=null){
+			TBody.replaceChild(tr,trPasado);
+			}else{
+				TBody.appendChild(tr);
+			}
+		}
+	}
+	function colorPorEstado(estado){
+		var rtn=2;
+/*
+	2- rosa rojoso (/° w °)/
+	3 - verde azuloso (¬° _ °)¬
+	4 - durazno	(¬ u _ u)¬
+*/
+		switch(rtn){
+			case 2: document.getElementById("contRojo").innerText++;
+			break;
+			case 3:document.getElementById("contVerde").innerText++;
+			break;
+			case 4:document.getElementById("contAmarillo").innerText++;
+			break;
+		}
+		return rtn;
+	}
+	</script>
+        
+	
+
+	</body>
+
+<!-- Mirrored from moltran.coderthemes.com/dark/ui-tabs-accordions.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Sep 2017 02:40:20 GMT -->
+</html>

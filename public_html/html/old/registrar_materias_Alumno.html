@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from moltran.coderthemes.com/dark/ui-tabs-accordions.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Sep 2017 02:40:20 GMT -->
+<head>
+        <meta charset="utf-8" />
+        <title>Moltran - Responsive Admin Dashboard Template</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+        <meta content="Coderthemes" name="author" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <link rel="shortcut icon" href="../assets/images/favicon_1.ico">
+        
+        <!-- Custom Files -->
+        <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="../assets/css/core.css" rel="stylesheet" type="text/css">
+        <link href="../assets/css/icons.css" rel="stylesheet" type="text/css">
+        <link href="../assets/css/components.css" rel="stylesheet" type="text/css">
+        <link href="../assets/css/pages.css" rel="stylesheet" type="text/css">
+        <link href="../assets/css/menu.css" rel="stylesheet" type="text/css">
+        <link href="../assets/css/responsive.css" rel="stylesheet" type="text/css">
+
+        <script src="../assets/js/modernizr.min.js"></script>
+        
+        
+        <link type="text/css" rel="stylesheet" href="../css/hover-min.css"> <!--efecto del calendario del cuadro -->
+        <link type="text/css" rel="stylesheet" href="../css/custom1.css">
+        
+      <!--  <link type="text/css" rel="stylesheet" href="../assets/css/hover-min.css"> efecto del calendario del cuadro 
+        <link type="text/css" rel="stylesheet" href="../assets/custom1.css">-->
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+
+
+    <body class="fixed-left">
+        
+        <!-- Begin page -->
+        <div id="wrapper">
+        
+            <!-- Top Bar Start -->
+            <div class="topbar">
+                <!-- LOGO 
+                <div class="topbar-left">
+                    <div class="text-center">
+                        <a href="index.html" class="logo"><i class="md md-terrain"></i> <span>Moltran </span></a>
+                    </div>
+                </div>-->
+                <!-- Button mobile view to collapse sidebar menu -->
+                <div class="navbar navbar-default" role="navigation">
+                    <div class="container">
+                        <div class="">
+                         
+                           
+                            <ul class="nav navbar-nav navbar-right pull-right">
+                                <li class="dropdown hidden-xs">
+                                    <a href="#" data-target="#" class="dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="true">
+                                       Bienvenido
+                                        Nombre de Usuario
+                                    </a>
+                                
+                                </li>
+                             
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="../assets/images/users/avatar-1.jpg" alt="user-img" class="img-circle"> </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0)"><i class="md md-face-unlock"></i> Profile</a></li>
+                                        <li><a href="javascript:void(0)"><i class="md md-settings"></i> Settings</a></li>
+                                        <li><a href="javascript:void(0)"><i class="md md-lock"></i> Lock screen</a></li>
+                                        <li><a href="javascript:void(0)"><i class="md md-settings-power"></i> Logout</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--/.nav-collapse -->
+                    </div>
+                </div>
+            </div>
+            <!-- Top Bar End -->
+
+
+            
+            <form>
+
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->                      
+            <div class="content-page">
+                <!-- Start content -->
+                <div class="content">
+                    <div class="container">
+
+                        <!-- Page-Title -->
+                        <div class="row">
+                            <div  class="col-sm-12">
+                                <h4 class="pull-left page-title">Tabs &amp; Accordions</h4>
+                                
+                                <ol style="cursor:pointer" class="breadcrumb pull-right">
+
+                                    <li><a data-toggle="modal" data-target="#con-close-modal">Agregar Materia</a></li>
+
+
+                                    <li><a data-toggle="modal" data-target="#con-close-modal-1">Eliminar Materia</a></li>
+                                   
+                                     
+                                </ol>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row"> 
+                            <div class="col-lg-12"> 
+                                <ul class="nav nav-tabs navtab-bg"> 
+                                    <li class="active"> 
+                                        <a href="#clases" data-toggle="tab" aria-expanded="true"> 
+                                            <span class="visible-xs"><i class="fa fa-calendar"></i></span> 
+                                            <span class="hidden-xs" >Horario/Clases  </span>     
+                                        </a> 
+                                    </li> 
+
+                                    <li class=""> 
+                                        <a href="#home" data-toggle="tab" aria-expanded="false"> 
+                                            <span class="visible-xs"><i class="fa fa-calendar"></i></span> 
+                                            <span class="hidden-xs">Horario/Clases</span> 
+                                        </a> 
+                                    </li> 
+                                    <li class=""> 
+                                        <a href="#profile" data-toggle="tab" aria-expanded="false"> 
+                                            <span class="visible-xs"><i class="fa fa-calendar"></i></span> 
+                                            <span class="hidden-xs">Horario/Asesorias</span> 
+                                        </a> 
+                                    </li> 
+
+                                </ul> 
+                                <div class="tab-content"> 
+                                    
+                                       <div class="tab-pane active" id="clases"> 
+                                        
+                                         <div class="box-body no-padding">
+                                            <div class="table-responsive">
+                                                <table class='table table-bordered table-hover table-striped table-condensed no-margin'>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Horasss</th>
+                                                            <th>Dia de Hoy</th>
+                                                          
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+
+
+                                                        <tr>
+                                                            <td align='center'>
+                                                                <br>
+                                                                <b>6:00 am</b><br>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <br>
+                                                                    <b>1155101-B</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>  <br></font>
+                                                                    
+                                                                </span>
+                                                            </td>
+
+                                                           
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td align='center'>
+                                                                <br>
+                                                                <b>7:00 am</b><br>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <b>1155101</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                                                    horas:4&nbsp;
+                                                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                                                </span>
+                                                            </td>
+
+                                                          
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td align='center'>
+                                                                <br>
+                                                                <b>8:00 am</b><br>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <b>1155101</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                                                    horas:4&nbsp;
+                                                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                                                </span>
+                                                            </td>
+
+                                                          
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td align='center'>
+                                                                <br>
+                                                                <b>9:00 am</b><br>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <b>1155101</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                                                    horas:4&nbsp;
+                                                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                                                </span>
+                                                            </td>
+
+                                                           
+                                                        </tr>
+
+
+                                                    </tbody>
+                                                </table>
+                                           
+
+                                        </div> <!-- End Row    </div> -->
+                                        </div> 
+                                        
+                                    </div> 
+                                    
+                                    <div class="tab-pane " id="home"> 
+                                        
+                                          <div class="box-body no-padding">
+                                            <div class="table-responsive">
+                                                <table class='table table-bordered table-hover table-striped table-condensed no-margin'>
+                                                    <thead>
+                                                        <tr>
+                                                          <th align="center">Hora</th>
+                                                            <th align='center'>Lunes</th>
+                                                            <th align='center'>Martes</th>
+                                                            <th align='center'>Miercoles</th>
+                                                            <th align='center'>Jueves</th>
+                                                            <th align='center'>Viernes</th>
+                                                            <th align='center'>Sabado</th>
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+
+
+                                                        <tr>
+                                                            <td align='center'>
+                                                                <br>
+                                                                <b>6:00 am</b><br>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <br>
+                                                                    <b>1155101-B</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>  <br></font>
+                                                                    
+                                                                </span>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                             
+                                                            </td>
+
+                                                            <td align='center'>
+                                                               <span class='badge hvr-grow-shadow badge_pen td_color4'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <br>
+                                                                    <b>1155102-A</b><br>
+                                                                    <font class='boxtitle2'>Fisika Mecanica<br>  <br></font>
+                                                                    
+                                                                </span>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color4'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <br>
+                                                                    <b>1155102-A</b><br>
+                                                                    <font class='boxtitle2'>Fisika    Mecanica<br>  <br></font>
+                                                                    
+                                                                </span>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <b>1155101</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                                                    horas:4&nbsp;
+                                                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                                                </span>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <b>1155101</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                                                    horas:4&nbsp;
+                                                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td align='center'>
+                                                                <br>
+                                                                <b>7:00 am</b><br>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                    <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <br>
+                                                                    <b>1155101-B</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>  <br></font>
+                                                                    
+                                                                </span>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <b>1155101</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                                                    horas:4&nbsp;
+                                                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                                                </span>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <b>1155101</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                                                    horas:4&nbsp;
+                                                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                                                </span>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <b>1155101</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                                                    horas:4&nbsp;
+                                                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                                                </span>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <b>1155101</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                                                    horas:4&nbsp;
+                                                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                                                </span>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <b>1155101</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                                                    horas:4&nbsp;
+                                                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td align='center'>
+                                                                <br>
+                                                                <b>8:00 am</b><br>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <b>1155101</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                                                    horas:4&nbsp;
+                                                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                                                </span>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <b>1155101</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                                                    horas:4&nbsp;
+                                                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                                                </span>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <b>1155101</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                                                    horas:4&nbsp;
+                                                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                                                </span>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <b>1155101</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                                                    horas:4&nbsp;
+                                                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                                                </span>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <b>1155101</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                                                    horas:4&nbsp;
+                                                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                                                </span>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <b>1155101</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                                                    horas:4&nbsp;
+                                                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td align='center'>
+                                                                <br>
+                                                                <b>9:00 am</b><br>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <b>1155101</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                                                    horas:4&nbsp;
+                                                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                                                </span>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                              <!--  <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <b>1155101</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                                                    horas:4&nbsp;
+                                                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                                                </span>-->
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <b>1155101</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                                                    horas:4&nbsp;
+                                                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                                                </span>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <b>1155101</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                                                    horas:4&nbsp;
+                                                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                                                </span>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <b>1155101</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                                                    horas:4&nbsp;
+                                                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                                                </span>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <b>1155101</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                                                    horas:4&nbsp;
+                                                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+
+
+                                                    </tbody>
+                                                </table>
+                                           
+
+                                        </div> <!-- End Row    </div> -->
+                                        </div> 
+                                        
+                                         </div> 
+                                    
+                                 
+                                    
+                                    <div class="tab-pane " id="profile"> 
+                                        
+                                         <div class="box-body no-padding">
+                                            <div class="table-responsive">
+                                                <table class='table table-bordered table-hover table-striped table-condensed no-margin'>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Hora</th>
+                                                            <th>Lunes</th>
+                                                            <th>Martes</th>
+                                                            <th>Miercoles</th>
+                                                            <th>Jueves</th>
+                                                            <th>Viernes</th>
+                                                            <th>Sabado</th>
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+
+
+                                                        <tr>
+                                                            <td align='center'>
+                                                                <br>
+                                                                <b>6:00 am</b><br>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <br>
+                                                                    <b>1155101-B</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>  <br></font>
+                                                                    
+                                                                </span>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <b>1155101</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                                                    horas:4&nbsp;
+                                                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                                                </span>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <b>1155101</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                                                    horas:4&nbsp;
+                                                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                                                </span>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <b>1155101</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                                                    horas:4&nbsp;
+                                                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                                                </span>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <b>1155101</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                                                    horas:4&nbsp;
+                                                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                                                </span>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <b>1155101</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                                                    horas:4&nbsp;
+                                                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td align='center'>
+                                                                <br>
+                                                                <b>7:00 am</b><br>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <b>1155101</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                                                    horas:4&nbsp;
+                                                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                                                </span>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <b>1155101</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                                                    horas:4&nbsp;
+                                                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                                                </span>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <b>1155101</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                                                    horas:4&nbsp;
+                                                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                                                </span>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <b>1155101</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                                                    horas:4&nbsp;
+                                                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                                                </span>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <b>1155101</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                                                    horas:4&nbsp;
+                                                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                                                </span>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <b>1155101</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                                                    horas:4&nbsp;
+                                                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td align='center'>
+                                                                <br>
+                                                                <b>8:00 am</b><br>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <b>1155101</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                                                    horas:4&nbsp;
+                                                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                                                </span>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <b>1155101</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                                                    horas:4&nbsp;
+                                                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                                                </span>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <b>1155101</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                                                    horas:4&nbsp;
+                                                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                                                </span>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <b>1155101</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                                                    horas:4&nbsp;
+                                                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                                                </span>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <b>1155101</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                                                    horas:4&nbsp;
+                                                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                                                </span>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <b>1155101</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                                                    horas:4&nbsp;
+                                                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td align='center'>
+                                                                <br>
+                                                                <b>9:00 am</b><br>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <b>1155101</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                                                    horas:4&nbsp;
+                                                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                                                </span>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                              <!--  <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <b>1155101</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                                                    horas:4&nbsp;
+                                                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                                                </span>-->
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <b>1155101</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                                                    horas:4&nbsp;
+                                                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                                                </span>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <b>1155101</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                                                    horas:4&nbsp;
+                                                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                                                </span>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <b>1155101</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                                                    horas:4&nbsp;
+                                                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                                                </span>
+                                                            </td>
+
+                                                            <td align='center'>
+                                                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                                                      data-toggle='tooltip' 
+                                                                      data-placement='top' 
+                                                                      title='Calculo diferencial'>
+                                                                    <b>1155101</b><br>
+                                                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                                                    horas:4&nbsp;
+                                                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+
+
+                                                    </tbody>
+                                                </table>
+                                           
+
+                                        </div> <!-- End Row    </div> -->
+                                        </div> 
+                                        
+                                    </div> 
+                                   
+                                </div> 
+                            </div> 
+
+                          
+                        </div>
+                         <!-- end row -->
+               </div> <!-- container -->
+                               
+                </div> <!-- content -->
+
+                <footer class="footer">
+                    2016 © Moltran.......
+                </footer>
+
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Right content here -->
+            <!-- ============================================================== -->
+
+</form>
+            
+            <!------------------------------------------ Inicio Modal de Registro De Usuario Nuevo ---------------------------------->     
+
+
+
+                <div id="con-close-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none">
+                    <div class="modal-dialog"> 
+                        <form id="myForm" metod="post">
+                            <div class="modal-content"> 
+                                <div class="modal-header"> 
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> 
+                                    <h4 class="modal-title">Registro de Materias</h4> 
+                                </div> 
+                                <div class="modal-body"> 
+
+                                    <div>
+                                        <div class="row"> 
+                                            <div class="col-md-12"> 
+                                                <div class="form-group"> 
+                                                    <label for="field-1" class="control-label">Codigo de la Materia</label> 
+                                                    <input type="text" class="form-control" id="codigo" placeholder="1151XXX-A"> 
+                                                </div> 
+                                            </div> 
+                                          <!--  <div class="col-md-6"> 
+                                                <div class="form-group"> 
+                                                    <label for="field-2" class="control-label">Grupo</label> 
+                                                    <input type="text" class="form-control" id="grupo" placeholder="A"> 
+                                                </div> 
+                                            </div> -->
+                                            
+                                        </div> 
+
+                                    </div>
+
+                            </div> 
+                            <div class="modal-footer"> 
+                                <br>
+                                <button type="button" class="btn btn-danger btn-custom waves-effect waves-light"  data-dismiss="modal">Cerrar</button> 
+                                <button type="button" class="btn btn-info waves-effect waves-light">Registrar</button> 
+                            </div> 
+                        </div> 
+                        
+                        </form>
+                    </div>
+                </div><!-- /.modal -->
+
+
+           <!-----------------------------Modal eliminar Materias---------------------------------------->
+           
+               <div id="con-close-modal-1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none">
+                    <div class="modal-dialog"> 
+                        <form id="myForm" metod="post">
+                            <div class="modal-content"> 
+                                <div class="modal-header"> 
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> 
+                                    <h4 class="modal-title">Eliminar de Materias</h4> 
+                                </div> 
+                                <div class="modal-body"> 
+
+                                    <div>
+                                        <div class="row"> 
+                                            <div class="col-md-12"> 
+                                                <div class="form-group"> 
+                                                    <label for="field-1" class="control-label">Codigo</label> 
+                                                    <input type="text" class="form-control" id="codigo" placeholder="1151XXX"> 
+                                                </div> 
+                                            </div> 
+                                           <!-- <div class="col-md-6"> 
+                                                <div class="form-group"> 
+                                                    <label for="field-2" class="control-label">Grupo</label> 
+                                                    <input type="text" class="form-control" id="grupo" placeholder="A"> 
+                                                </div> 
+                                            </div> -->
+                                        </div> 
+
+                                    </div>
+
+                            </div> 
+                            <div class="modal-footer"> 
+                                <br>
+                               <!-- <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cerrar</button> -->
+                                <button type="button" class="btn btn-danger btn-custom waves-effect waves-light" data-dismiss="modal">Cerrar</button> 
+                                <button type="button" class="btn btn-info waves-effect waves-light">Eliminar</button> 
+                            </div> 
+                        </div> 
+                        
+                        </form>
+                    </div>
+                </div><!-- /.modal -->
+           
+           <!-----------------------------Modal eliminar Materias---------------------------------------->
+           
+
+
+        </div>
+        <!-- END wrapper -->
+    
+        <script>
+            var resizefunc = [];
+        </script>
+
+        <!-- CUSTOM JS -->
+        <script src="../assets/js/jquery.min.js"></script>
+        <script src="../assets/js/bootstrap.min.js"></script>
+        <script src="../assets/js/detect.js"></script>
+        <script src="../assets/js/fastclick.js"></script>
+        <script src="../assets/js/jquery.slimscroll.js"></script>
+        <script src="../assets/js/jquery.blockUI.js"></script>
+        <script src="../assets/js/waves.js"></script>
+        <script src="../assets/js/wow.min.js"></script>
+        <script src="../assets/js/jquery.nicescroll.js"></script>
+        <script src="../assets/js/jquery.scrollTo.min.js"></script>
+
+        <script src="../assets/js/jquery.app.js"></script>
+        
+        
+        	<script type="text/javascript">
+	var count=0;
+		function agregar_d(dias){
+			var option = document.createElement("option");
+			option.text = "Lunes";
+			dias.add(option); 
+			option = document.createElement("option");
+			option.text = "Martes";
+			dias.add(option);
+			option = document.createElement("option");
+			option.text = "Miércoles";
+			dias.add(option);
+			option = document.createElement("option");
+			option.text = "Jueves";
+			dias.add(option);
+			option = document.createElement("option");
+			option.text = "Viernes";
+			dias.add(option);
+			option = document.createElement("option");
+			option.text = "Sábado";
+			dias.add(option);
+			dias.setAttribute("id", "d%"+count);
+			return dias;
+		}
+		function agregar_h(horas,state){
+			for (var i = 6; i < 23; i++) {
+				var option = document.createElement("option");
+				//option.value=i;
+				option.text = i;
+				horas.add(option); 
+				}
+				horas.setAttribute("id", state+"%"+count);
+			return horas;
+		}
+		function agregar(divId){
+			var dias = document.createElement("SELECT");
+			var start = document.createElement("SELECT");
+			var end = document.createElement("SELECT");
+			var lbl = document.createElement("LABEL");
+			lbl.setAttribute("id","lbl%"+count);
+			var btn = document.createElement("BUTTON");
+			btn.setAttribute("id","btn%"+count);
+			btn.innerText="Eliminar";
+			btn.setAttribute("type","button");
+			btn.setAttribute("onclick","eliminar(this)");
+			dias=agregar_d(dias);
+			start=agregar_h(start,"s"); 
+			end=agregar_h(end,"e"); 
+			end.value="7";
+			var container=document.createElement("DIV");
+			container.setAttribute("id","div%"+count);
+			var div =document.getElementById(divId);
+    		container.appendChild(dias);
+    		container.appendChild(start);
+    		container.appendChild(end);
+    		container.appendChild(btn);
+    		container.appendChild(lbl);
+			div.appendChild(container);
+			count++;
+			validarHorario();						
+		}
+		function eliminar(btn){ 
+			var aux=btn.getAttribute("id").split("%");
+			var id=aux[1];
+			document.getElementById("div%"+id).remove();
+		}
+		function validarHorario(){
+			for(var i=0;i<count;i++){
+				var lbl=document.getElementById("lbl%"+i);
+					if(lbl!=null){
+						lbl.innerText="";
+					}
+			}
+			var respuesta=true;
+			for(var i=0;i<count;i++){
+				var di=document.getElementById("d%"+i);
+				var si=document.getElementById("s%"+i); //start
+				var ei=document.getElementById("e%"+i); //end
+				if(di!=null){
+					di=di.value;
+					si=si.value;
+					ei=ei.value;
+					if(si>=ei){
+						document.getElementById("lbl%"+i).innerText="otro mensaje";
+						respuesta= false;
+					}
+				for(var j=i+1;j<count;j++){
+					var dj=document.getElementById("d%"+j);
+					var sj=document.getElementById("s%"+j);
+					var ej=document.getElementById("e%"+j);
+					if(dj!=null){
+						dj=dj.value;
+						sj=sj.value;
+						ej=ej.value;
+						if(di==dj){
+							if(si>=sj && si<=ej){
+								document.getElementById("lbl%"+j).innerText="nel perro >:c";
+								respuesta=false;
+							}
+							if(ei>sj && ei<=ej){
+								document.getElementById("lbl%"+j).innerText="nel perro >:c";
+								respuesta=false;
+							}
+						}
+					}
+				}
+			}
+			}
+			return respuesta;
+		}
+		function validar(){
+			var rta=true;
+			if(document.getElementById("codigo").value=="")rta=false;
+			if(document.getElementById("nombre").value=="")rta=false;
+			return rta;
+		}		
+		function preparar_datos(div){
+			rta= new Array();
+			var d=document.getElementById(div);
+			var divhijos=d.childNodes;
+			for(var i=3;i<divhijos.length;i++){ //mirar en el html, el div se inicializa con text-button-text
+				var selects=divhijos[i].childNodes;
+					rta.push(selects[0].value+"/"+
+							selects[1].value+"/"+
+							selects[2].value);
+			}
+			return rta;
+		}
+		function enviar(){
+			if(validar()){
+			if(validarHorario()){
+				var clases=preparar_datos("clase");
+				var asesorias=preparar_datos("asesoria");
+				if(clases.length>0 || asesorias.length>0){
+					var env= [clases,"%",asesorias];
+					alert(env);
+			}else{
+				alert("(-.-) el horario está vacio... (-.-)");
+			}
+			}else{
+				alert("¡Wow! ¡El super profe puede dictar dos clases al tiempo!");
+			}
+			}else {
+			alert("No somos adivinos, faltan los datos de la materia");
+		}
+		}
+	</script>
+        
+	
+	</body>
+
+<!-- Mirrored from moltran.coderthemes.com/dark/ui-tabs-accordions.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Sep 2017 02:40:20 GMT -->
+</html>

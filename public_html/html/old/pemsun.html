@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html>
+<head>
+            <title>Información Académica Divisist 2.0</title>
+        <meta charset="UTF-8">
+    <meta name="application-name" content="Divisist2.0" lang="es">
+    <meta name="Author" content="Henry Alexander Peñaranda Mora" lang="es">
+    <meta name="Contributors" content="Viarney Alirio Villamizar Moreno" lang="es">
+    <meta name="Aditional-Contributors" content="Jean Polo Cequeda Olago, Luis Eduardo Ramirez Mora" lang="es">
+            <link href='assets1/img/ufps/favicon.ico' rel='Shortcut icon'>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <link type="text/css" rel="stylesheet" href="assets1/css/bootstrap/bootstrap.min.css"><link type="text/css" rel="stylesheet" href="assets1/css/fontawesome/css/font-awesome.min.css"><link type="text/css" rel="stylesheet" href="assets1/css/hovermaster/hover-min.css"><link type="text/css" rel="stylesheet" href="assets1/css/adminlte/AdminLTE.min.css"><link type="text/css" rel="stylesheet" href="assets1/css/custom.css"><link type="text/css" rel="stylesheet" href="assets1/css/adminlte/skins/_all-skins.min.css"><link type="text/css" rel="stylesheet" href="assets1/css/adminlte/skins/skin-red-light.min.css"></head>
+<body class="skin-red-light sidebar-mini ">
+<div class="wrapper">
+    <header class="main-header">
+        <!-- Logo -->
+        <a href="#" class="logo">
+            <!-- mini logo for sidebar mini 50x50 pixels -->
+            <span class="logo-mini"><b>DS</b>2.0</span>
+            <!-- logo for regular state and mobile devices -->
+            <span class="logo-lg">DIVISIST <strong>2.0</strong></span>
+        </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top" role="navigation">
+    <!-- Sidebar toggle button-->
+    <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+    </a>
+    <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+
+                        <!--Notifications: style can be found in dropdown.less--> 
+            <li class="dropdown notifications-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="fa fa-bell-o "></i>
+                    <span class="label label-default">
+                        0                    </span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li class="header">No tienes notificaciones nuevas</li>
+                                            <div class="clearfix text-center text-muted">
+                            <i class="fa fa-5x fa-check-circle-o"></i>                            
+                        </div>
+                                        
+                    <li class="footer">
+                        <a href="notification">
+                            <span class="label label-default">Ver todas</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>          
+
+            <!-- User Account: style can be found in dropdown.less -->
+            <li class="dropdown user user-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <img src="public/imagenes/7506233dc84993fe43817724beb952ba3a667c7b419699a6c71de3a608ed5304.JPEG" class="user-image" alt="User Image"/>
+                    <span class="hidden-xs">
+                        Edward Alfonso                    </span>
+                </a>
+                <ul class="dropdown-menu">
+                    <!-- User image -->
+                    <li class="user-header">
+                        <!--<img src="http://divisist.ufps.edu.co/fotos/1800705.JPEG" class="img-circle" alt="User Image" /> -->
+                        <img src="public/imagenes/7506233dc84993fe43817724beb952ba3a667c7b419699a6c71de3a608ed5304.JPEG" class="img-circle" alt="User Image" />
+                        <p>
+                            Edward Alfonso                            <small>Alumno UFPS</small>
+                        </p>
+                    </li>
+                    <!-- Menu Body -->
+                    <!--                    <li class="user-body">
+                                            <div class="col-xs-4 text-center">
+                                                <a href="#">Item de Menu</a>
+                                            </div>                        
+                                        </li>-->
+                    <!-- Menu Footer-->
+                    <li class="user-footer">
+                        <div class="pull-right">
+                            <a href="index/logout" class="btn btn-default btn-flat"><i class="fa fa-power-off"></i> Cerrar Sesión</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <!-- Control Sidebar Toggle Button -->
+            <li>
+                <a href="index/logout"><i class="fa fa-power-off"></i></a>
+            </li>
+        </ul>
+    </div>
+</nav>    </header>
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+        <!-- Sidebar user panel -->
+        <div class="user-panel">
+            <div class="pull-left image">
+                <img
+                    src="public/imagenes/7506233dc84993fe43817724beb952ba3a667c7b419699a6c71de3a608ed5304.JPEG"
+                    class="img-circle" alt="User Image"/>
+            </div>
+            <div class="pull-left info">
+                <p>
+                    Edward Alfonso                </p>
+                <!--<a href="#"><i class="fa fa-circle text-success"></i> Online</a>-->
+            </div>
+        </div>
+        <ul class="sidebar-menu" style="min-height: 600px;">
+            <li class="header">NAVEGACIÓN PRINCIPAL</li>
+            <li class=" treeview">
+                <a href="#">
+                    <i class="fa fa-user"></i><span>Información Estudiantil</span> <i
+                        class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="hvr-icon-back2 ">
+                        <a href="estudiante/datos"> Datos Personales </a>
+                    </li>
+                                        <li class="hvr-icon-back2 ">
+                        <a href="estudiante/estado_matricula"> Estado Matrícula</a>
+                    </li>
+                                        <li class="hvr-icon-back2 ">
+                        <a href="estudiante/normatividad"> Normatividad </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="active treeview">
+                <a href="#">
+                    <i class="fa fa-info-circle"></i> <span>Información Académica</span> <i
+                        class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                                        <li class="hvr-icon-back2 ">
+                        <a class="no-padding-left" href="informacion_academica/materias">
+                            Materias
+                        </a>
+                    </li>
+                                        <li class="hvr-icon-back2 ">
+                        <a href="informacion_academica/horario"> Horario </a>
+                    </li>
+                    <li class="hvr-icon-back2 ">
+                        <a href="informacion_academica/notas"> Notas</a>
+                    </li>
+                    <li class="hvr-icon-back2 active">
+                        <a href="informacion_academica/pensum"> Pensum </a>
+                    </li>
+                </ul>
+            </li>
+            <li class=" treeview">
+                <a href="#">
+                    <i class="fa fa-question-circle"></i> <span>Consultas</span> <i
+                        class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="hvr-icon-back2 ">
+                        <a href="consulta/materia">
+                            Materias
+                        </a>
+                    </li>
+                    <li class="hvr-icon-back2 ">
+                        <a href="consulta/deudas">
+                            Deudas
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class=" treeview">
+                <a href="#">
+                    <i class="fa fa-book"></i> <span>Matrícula Académica</span> <i
+                        class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="hvr-icon-back2 ">
+                        <a href="matricula_academica/horario_inclusion">
+                            Horario Inclusiones
+                        </a>
+                    </li>
+                                            <li class="hvr-icon-back2 ">
+                            <a href="matricula_academica/inclusion_cf">
+                                Cursos de Formación
+                            </a>
+                        </li>
+                                                                                                </ul>
+            </li>
+            <li class=" treeview">
+                <a href="#">
+                    <i class="fa fa-puzzle-piece"></i> <span>Servicios Bienestar</span> <i
+                        class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="hvr-icon-back2 ">
+                        <a href="bienestar_universitario/beca_trabajo">
+                            Beca Trabajo
+                        </a>
+                    </li>
+                    <li class="hvr-icon-back2 ">
+                        <a href="bienestar_universitario/monitoria">
+                            Monitoría
+                        </a>
+                    </li>
+                    <li class="hvr-icon-back2 ">
+                        <a href="bienestar_universitario/comedor">
+                            Restaurante
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+                        <li class="">
+                <a href="plad">
+                    <i class="fa fa fa-rocket"></i><span>PLAD</span>
+                </a>
+            </li>
+                        <li class="">
+                <a href="men">
+                    <i class="fa fa-pencil-square"></i><span>Encuesta MEN</span>
+                </a>
+            </li>
+            <li class="">
+                <a href="notification">
+                    <i class="fa fa-bell"></i><span>Notificaciones</span>
+                </a>
+            </li>
+            <li class="">
+                <a href="configuracion">
+                    <i class="fa fa-gears"></i><span>Configuración</span>
+                </a>
+            </li>
+
+                            <li class="">
+                    <a href="examen_linea">
+                        <i class="fa fa-pencil-square-o"></i><span>Examen en línea</span>
+                    </a>
+                </li>
+                        
+                <li class="">
+                    <a href="niveles">
+                        <i class="fa fa-pencil-square-o"></i><span>Niveles</span>
+                        <small class="label label-success pull-right">¡Nuevo!</small>
+                    </a>
+                </li>
+
+        </ul>
+    </section>
+    <!-- /.sidebar -->
+</aside>
+
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <section class="content-header">
+            <!-- Alertas  -->
+            <div id="template_alerts">
+                                                                            </div>
+                            <!-- Content Header (Page header) -->
+                <h1>
+                    Información Académica                    <small>Consulte su estado de su pénsum académico</small>
+                    <span class="text-muted pull-right" style="font-size: 10px;">Miércoles 04 de Octubre de 2017</span>
+                </h1>
+                    </section>
+        <!-- Main content -->
+        <section class="content">
+                            <!-- CONSULTA DE ESTADO DEL PÉNSUM  DEL ESTUDIANTE-->
+        <div class="box box-primary">    
+        <div class="box-header with-border">
+            <i class="fa fa-check-circle-o"></i>
+            <h2 class="box-title">Estado de Pénsum Académico (115-03)</h2>  
+            <label class="pull-right label label-default td_color2">Materia no matriculada</label>
+            <label class="pull-right label label-default td_color4">Materia matriculada</label>
+            <label class="pull-right label label-default td_color3">Materia cursada</label>
+        </div>
+        <div class="box-body no-padding">
+            <div class="table-responsive">
+                <table class='table table-bordered table-hover table-striped table-condensed no-margin'>
+                    <tbody>
+                        <tr>
+                                                                                                                                                                        <th><h5><b>PRIMER<br>SEMESTRE</b></h5></th>
+                            
+                                                                                                                 
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Calculo diferencial'>
+                                    <b>1155101</b><br>
+                                    <font class='boxtitle2'>Calculo diferencial<br>
+                                    horas:4&nbsp;
+                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                 
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Matematicas discretas'>
+                                    <b>1155102</b><br>
+                                    <font class='boxtitle2'>Matematicas discretas<br>
+                                    horas:3&nbsp;
+                                    Cred:3                                                                            <br>2014-2                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                 
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Fundamentos de programacion'>
+                                    <b>1155104</b><br>
+                                    <font class='boxtitle2'>Fundamentos de programacion<br>
+                                    horas:4&nbsp;
+                                    Cred:3                                                                            <br>2014-2                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                 
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Introduccion ing sistemas'>
+                                    <b>1155105</b><br>
+                                    <font class='boxtitle2'>Introduccion ing sistemas<br>
+                                    horas:3&nbsp;
+                                    Cred:3                                                                            <br>2014-2                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                 
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Comunicacion I'>
+                                    <b>1155106</b><br>
+                                    <font class='boxtitle2'>Comunicacion I<br>
+                                    horas:2&nbsp;
+                                    Cred:2                                                                            <br>2014-2                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                 
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Intro vida universitaria'>
+                                    <b>1155108</b><br>
+                                    <font class='boxtitle2'>Intro vida universitaria<br>
+                                    horas:1&nbsp;
+                                    Cred:1                                                                            <br>2014-2                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                                                                                                            </td>
+                                        </tr>
+                                                                    <th><h5><b>SEGUNDO<br>SEMESTRE</b></h5></th>
+                            
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Calculo integral -  Prerrequisito:  1155101'>
+                                    <b>1155201</b><br>
+                                    <font class='boxtitle2'>Calculo integral<br>
+                                    horas:4&nbsp;
+                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Algebra lineal -  Prerrequisito:  1155101'>
+                                    <b>1155202</b><br>
+                                    <font class='boxtitle2'>Algebra lineal<br>
+                                    horas:3&nbsp;
+                                    Cred:3                                                                            <br>2014-2                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Fisica mecanica -  Prerrequisito:  1155101'>
+                                    <b>1155203</b><br>
+                                    <font class='boxtitle2'>Fisica mecanica<br>
+                                    horas:4&nbsp;
+                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Programacion orientada a objetos -  Prerrequisito:  1155104'>
+                                    <b>1155204</b><br>
+                                    <font class='boxtitle2'>Programacion orientada a&#8230;<br>
+                                    horas:4&nbsp;
+                                    Cred:3                                                                            <br>2015-1                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Comunicacion II -  Prerrequisito:  1155106'>
+                                    <b>1155206</b><br>
+                                    <font class='boxtitle2'>Comunicacion II<br>
+                                    horas:2&nbsp;
+                                    Cred:2                                                                            <br>2014-2                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Seminario intergador I -  Prerrequisito:  1155104'>
+                                    <b>1155209</b><br>
+                                    <font class='boxtitle2'>Seminario intergador I<br>
+                                    horas:1&nbsp;
+                                    Cred:1                                                                            <br>2014-2                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                                                                                                            </td>
+                                        </tr>
+                                                                    <th><h5><b>TERCER<br>SEMESTRE</b></h5></th>
+                            
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Calculo vectorial -  Prerrequisito:  1155201'>
+                                    <b>1155301</b><br>
+                                    <font class='boxtitle2'>Calculo vectorial<br>
+                                    horas:4&nbsp;
+                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Fisica electromagnetica -  Prerrequisito:  1155203'>
+                                    <b>1155303</b><br>
+                                    <font class='boxtitle2'>Fisica electromagnetica<br>
+                                    horas:4&nbsp;
+                                    Cred:4                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Estructuras de datos -  Prerrequisito:  1155204'>
+                                    <b>1155304</b><br>
+                                    <font class='boxtitle2'>Estructuras de datos<br>
+                                    horas:4&nbsp;
+                                    Cred:3                                                                            <br>2016-1                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Programacion orientada a objetos II -  Prerrequisito:  1155204'>
+                                    <b>1155305</b><br>
+                                    <font class='boxtitle2'>Programacion orientada a&#8230;<br>
+                                    horas:4&nbsp;
+                                    Cred:3                                                                            <br>2016-1                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Seminario de investigacion I -  Prerrequisito:  1155209 Cre:23'>
+                                    <b>1155306</b><br>
+                                    <font class='boxtitle2'>Seminario de investigacion&#8230;<br>
+                                    horas:2&nbsp;
+                                    Cred:2                                                                            <br>2014-2                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                                                                                                            </td>
+                                        </tr>
+                                                                    <th><h5><b>CUARTO<br>SEMESTRE</b></h5></th>
+                            
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Ecuaciones diferenciales -  Prerrequisito:  1155301'>
+                                    <b>1155401</b><br>
+                                    <font class='boxtitle2'>Ecuaciones diferenciales<br>
+                                    horas:4&nbsp;
+                                    Cred:4                                                                            <br>2014-2                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Probabilidad y estadistica -  Prerrequisito:  1155102'>
+                                    <b>1155402</b><br>
+                                    <font class='boxtitle2'>Probabilidad y estadistica<br>
+                                    horas:4&nbsp;
+                                    Cred:3                                                                            <br>2014-2                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Ondas y particulas -  Prerrequisito:  1155303'>
+                                    <b>1155403</b><br>
+                                    <font class='boxtitle2'>Ondas y particulas<br>
+                                    horas:3&nbsp;
+                                    Cred:3                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color4'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Analisis de algoritmos -  Prerrequisito:  1155304'>
+                                    <b>1155404</b><br>
+                                    <font class='boxtitle2'>Analisis de algoritmos<br>
+                                    horas:3&nbsp;
+                                    Cred:3                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color4'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Teoria de la computacion -  Prerrequisito:  1155304'>
+                                    <b>1155405</b><br>
+                                    <font class='boxtitle2'>Teoria de la&#8230;<br>
+                                    horas:3&nbsp;
+                                    Cred:3                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                 
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Descubriendo negocios basados tic (opcional) -  Prerrequisito:   Cre:58'>
+                                    <b>1155406</b><br>
+                                    <font class='boxtitle2'>Descubriendo negocios basados&#8230;<br>
+                                    horas:2&nbsp;
+                                    Cred:2                                                                                                                <br>Electiva                                                                        </font>
+                                </span>
+                            </td>
+                                                                                                                                                                            </td>
+                                        </tr>
+                                                                    <th><h5><b>QUINTO<br>SEMESTRE</b></h5></th>
+                            
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Analisis numerico -  Prerrequisito:  1155401'>
+                                    <b>1155501</b><br>
+                                    <font class='boxtitle2'>Analisis numerico<br>
+                                    horas:3&nbsp;
+                                    Cred:3                                                                            <br>2014-2                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Investigacion de operaciones -  Prerrequisito:  1155402'>
+                                    <b>1155502</b><br>
+                                    <font class='boxtitle2'>Investigacion de operaciones<br>
+                                    horas:3&nbsp;
+                                    Cred:3                                                                            <br>2014-2                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Electronica -  Prerrequisito:  1155403'>
+                                    <b>1155503</b><br>
+                                    <font class='boxtitle2'>Electronica<br>
+                                    horas:4&nbsp;
+                                    Cred:3                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color4'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Arquitectura de computadores -  Prerrequisito:  1155304'>
+                                    <b>1155504</b><br>
+                                    <font class='boxtitle2'>Arquitectura de computadores<br>
+                                    horas:3&nbsp;
+                                    Cred:3                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Seminario de investigacion II -  Prerrequisito:  1155306'>
+                                    <b>1155506</b><br>
+                                    <font class='boxtitle2'>Seminario de investigacion&#8230;<br>
+                                    horas:2&nbsp;
+                                    Cred:2                                                                            <br>2014-2                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                 
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Problemas sociales de frontera -  Prerrequisito:   Cre:5'>
+                                    <b>1155511</b><br>
+                                    <font class='boxtitle2'>Problemas sociales de&#8230;<br>
+                                    horas:2&nbsp;
+                                    Cred:2                                                                            <br>2014-2                                                                                                                <br>Electiva                                                                        </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                 
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Psicologia -  Prerrequisito:   Cre:5'>
+                                    <b>1155513</b><br>
+                                    <font class='boxtitle2'>Psicologia<br>
+                                    horas:2&nbsp;
+                                    Cred:2                                                                            <br>2014-2                                                                                                                <br>Electiva                                                                        </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                 
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Psicologia industrial -  Prerrequisito:   Cre:5'>
+                                    <b>1155515</b><br>
+                                    <font class='boxtitle2'>Psicologia industrial<br>
+                                    horas:2&nbsp;
+                                    Cred:2                                                                            <br>2014-2                                                                                                                <br>Electiva                                                                        </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                 
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Catedra de paz, desarrollo y posconflicto -  Prerrequisito:   Cre:5'>
+                                    <b>1155516</b><br>
+                                    <font class='boxtitle2'>Catedra de paz,&#8230;<br>
+                                    horas:2&nbsp;
+                                    Cred:2                                                                                                                <br>Electiva                                                                        </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Nuevas tecnologias y sociedad -  Prerrequisito:  1155105'>
+                                    <b>1155521</b><br>
+                                    <font class='boxtitle2'>Nuevas tecnologias y&#8230;<br>
+                                    horas:2&nbsp;
+                                    Cred:2                                                                                                                <br>Electiva                                                                        </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                 
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Relaciones humanas'>
+                                    <b>1155522</b><br>
+                                    <font class='boxtitle2'>Relaciones humanas<br>
+                                    horas:2&nbsp;
+                                    Cred:2                                                                                                                <br>Electiva                                                                        </font>
+                                </span>
+                            </td>
+                                                                                                                                                                            </td>
+                                        </tr>
+                                                                    <th><h5><b>SEXTO<br>SEMESTRE</b></h5></th>
+                            
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Sistemas operativos -  Prerrequisito:  1155504'>
+                                    <b>1155604</b><br>
+                                    <font class='boxtitle2'>Sistemas operativos<br>
+                                    horas:3&nbsp;
+                                    Cred:3                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color4'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Bases de datos -  Prerrequisito:  1155304 - 1155305'>
+                                    <b>1155605</b><br>
+                                    <font class='boxtitle2'>Bases de datos<br>
+                                    horas:4&nbsp;
+                                    Cred:3                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Programacion web -  Prerrequisito:  1155305 - 1155304'>
+                                    <b>1155606</b><br>
+                                    <font class='boxtitle2'>Programacion web<br>
+                                    horas:4&nbsp;
+                                    Cred:3                                                                            <br>2017-1                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                 
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Constitucion y civismo -  Prerrequisito:   Cre:20'>
+                                    <b>1155607</b><br>
+                                    <font class='boxtitle2'>Constitucion y civismo<br>
+                                    horas:2&nbsp;
+                                    Cred:2                                                                            <br>2014-2                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                 
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Planeacion estrategica de sistemas de inf -  Prerrequisito:   Cre:48'>
+                                    <b>1155608</b><br>
+                                    <font class='boxtitle2'>Planeacion estrategica de&#8230;<br>
+                                    horas:3&nbsp;
+                                    Cred:3                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color4'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Seminario integrador II -  Prerrequisito:  1155304 - 1155209 Cre:75'>
+                                    <b>1155609</b><br>
+                                    <font class='boxtitle2'>Seminario integrador II<br>
+                                    horas:2&nbsp;
+                                    Cred:2                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                 
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Proyecto social en ing de sistemas -  Prerrequisito:   Cre:40'>
+                                    <b>1155611</b><br>
+                                    <font class='boxtitle2'>Proyecto social en&#8230;<br>
+                                    horas:2&nbsp;
+                                    Cred:2                                                                            <br>2015-2                                                                                                                <br>Electiva                                                                        </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                 
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Crecimeinto de negocios (opcional) -  Prerrequisito:   Cre:80'>
+                                    <b>1155612</b><br>
+                                    <font class='boxtitle2'>Crecimeinto de negocios&#8230;<br>
+                                    horas:2&nbsp;
+                                    Cred:2                                                                                                                <br>Electiva                                                                        </font>
+                                </span>
+                            </td>
+                                                                                                                                                                            </td>
+                                        </tr>
+                                                                    <th><h5><b>SEPTIMO<br>SEMESTRE</b></h5></th>
+                            
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Teoria general de las comunicaciones -  Prerrequisito:  1155604'>
+                                    <b>1155704</b><br>
+                                    <font class='boxtitle2'>Teoria general de&#8230;<br>
+                                    horas:3&nbsp;
+                                    Cred:3                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Analisis y diseÑo de sistemas -  Prerrequisito:  1155605'>
+                                    <b>1155705</b><br>
+                                    <font class='boxtitle2'>Analisis y diseÑo&#8230;<br>
+                                    horas:4&nbsp;
+                                    Cred:4                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color3'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Seminario de investigacion III -  Prerrequisito:  1155506'>
+                                    <b>1155706</b><br>
+                                    <font class='boxtitle2'>Seminario de investigacion&#8230;<br>
+                                    horas:2&nbsp;
+                                    Cred:2                                                                            <br>2015-1                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                 
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Etica profesional -  Prerrequisito:   Cre:90'>
+                                    <b>1155707</b><br>
+                                    <font class='boxtitle2'>Etica profesional<br>
+                                    horas:2&nbsp;
+                                    Cred:2                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Administracion de proyectos informaticos -  Prerrequisito:  1155608'>
+                                    <b>1155708</b><br>
+                                    <font class='boxtitle2'>Administracion de proyectos&#8230;<br>
+                                    horas:3&nbsp;
+                                    Cred:3                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Tecnicas gerenciales y de negociacion -  Prerrequisito:  1155608'>
+                                    <b>1155711</b><br>
+                                    <font class='boxtitle2'>Tecnicas gerenciales y&#8230;<br>
+                                    horas:3&nbsp;
+                                    Cred:3                                                                                                                <br>Electiva                                                                        </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Economia y finanzas para ingenieros -  Prerrequisito:  1155608'>
+                                    <b>1155712</b><br>
+                                    <font class='boxtitle2'>Economia y finanzas&#8230;<br>
+                                    horas:3&nbsp;
+                                    Cred:3                                                                                                                <br>Electiva                                                                        </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Bases  de datos avanzadas -  Prerrequisito:  1155605'>
+                                    <b>1155713</b><br>
+                                    <font class='boxtitle2'>Bases  de datos&#8230;<br>
+                                    horas:3&nbsp;
+                                    Cred:3                                                                                                                <br>Electiva                                                                        </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Patrones de diseÑo -  Prerrequisito:  1155605'>
+                                    <b>1156701</b><br>
+                                    <font class='boxtitle2'>Patrones de diseÑo<br>
+                                    horas:3&nbsp;
+                                    Cred:3                                                                                                                <br>Electiva                                                                        </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Gestion de bases de datos -  Prerrequisito:  1155605'>
+                                    <b>1156702</b><br>
+                                    <font class='boxtitle2'>Gestion de bases&#8230;<br>
+                                    horas:3&nbsp;
+                                    Cred:3                                                                                                                <br>Electiva                                                                        </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Inteligencia artificial -  Prerrequisito:  1155605'>
+                                    <b>1156703</b><br>
+                                    <font class='boxtitle2'>Inteligencia artificial<br>
+                                    horas:3&nbsp;
+                                    Cred:3                                                                                                                <br>Electiva                                                                        </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Teoria de grafos -  Prerrequisito:  1155404'>
+                                    <b>1156704</b><br>
+                                    <font class='boxtitle2'>Teoria de grafos<br>
+                                    horas:3&nbsp;
+                                    Cred:3                                                                                                                <br>Electiva                                                                        </font>
+                                </span>
+                            </td>
+                                                                                                                                                                            </td>
+                                        </tr>
+                                                                    <th><h5><b>OCTAVO<br>SEMESTRE</b></h5></th>
+                            
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Redes de computadores -  Prerrequisito:  1155704'>
+                                    <b>1155804</b><br>
+                                    <font class='boxtitle2'>Redes de computadores<br>
+                                    horas:3&nbsp;
+                                    Cred:3                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Ingenieria de software -  Prerrequisito:  1155705'>
+                                    <b>1155805</b><br>
+                                    <font class='boxtitle2'>Ingenieria de software<br>
+                                    horas:4&nbsp;
+                                    Cred:4                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Formulacion y evaluacion de proyectos de sistemas -  Prerrequisito:  1155708'>
+                                    <b>1155808</b><br>
+                                    <font class='boxtitle2'>Formulacion y evaluacion&#8230;<br>
+                                    horas:3&nbsp;
+                                    Cred:3                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Seminario integrador III -  Prerrequisito:  1155606 - 1155609 - 1155705'>
+                                    <b>1155809</b><br>
+                                    <font class='boxtitle2'>Seminario integrador III<br>
+                                    horas:2&nbsp;
+                                    Cred:2                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Sistemas de informacion geografica -  Prerrequisito:  1155705'>
+                                    <b>1156801</b><br>
+                                    <font class='boxtitle2'>Sistemas de informacion&#8230;<br>
+                                    horas:3&nbsp;
+                                    Cred:3                                                                                                                <br>Electiva                                                                        </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Informatica educativa -  Prerrequisito:  1155705'>
+                                    <b>1156802</b><br>
+                                    <font class='boxtitle2'>Informatica educativa<br>
+                                    horas:3&nbsp;
+                                    Cred:3                                                                                                                <br>Electiva                                                                        </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Redes inalambricas -  Prerrequisito:  1155704'>
+                                    <b>1156803</b><br>
+                                    <font class='boxtitle2'>Redes inalambricas<br>
+                                    horas:3&nbsp;
+                                    Cred:3                                                                                                                <br>Electiva                                                                        </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Administracion de so de red -  Prerrequisito:  1155604'>
+                                    <b>1156804</b><br>
+                                    <font class='boxtitle2'>Administracion de so&#8230;<br>
+                                    horas:3&nbsp;
+                                    Cred:3                                                                                                                <br>Electiva                                                                        </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Gerencia y tecnologia -  Prerrequisito:  1155608'>
+                                    <b>1156805</b><br>
+                                    <font class='boxtitle2'>Gerencia y tecnologia<br>
+                                    horas:3&nbsp;
+                                    Cred:3                                                                                                                <br>Electiva                                                                        </font>
+                                </span>
+                            </td>
+                                                                                                                                                                            </td>
+                                        </tr>
+                                                                    <th><h5><b>NOVENO<br>SEMESTRE</b></h5></th>
+                            
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Arquitectura de software -  Prerrequisito:  1155805'>
+                                    <b>1155905</b><br>
+                                    <font class='boxtitle2'>Arquitectura de software<br>
+                                    horas:3&nbsp;
+                                    Cred:3                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Gestion de tics -  Prerrequisito:  1155808'>
+                                    <b>1155908</b><br>
+                                    <font class='boxtitle2'>Gestion de tics<br>
+                                    horas:2&nbsp;
+                                    Cred:2                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                 
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Practica en ing de sistemas -  Prerrequisito:   Cre:130'>
+                                    <b>1155909</b><br>
+                                    <font class='boxtitle2'>Practica en ing&#8230;<br>
+                                    horas:4&nbsp;
+                                    Cred:6                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Desarrollo de aplicaciones moviles -  Prerrequisito:  1155705 - 1155704'>
+                                    <b>1156901</b><br>
+                                    <font class='boxtitle2'>Desarrollo de aplicaciones&#8230;<br>
+                                    horas:3&nbsp;
+                                    Cred:3                                                                                                                <br>Electiva                                                                        </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Seguridad informatica -  Prerrequisito:  1155704'>
+                                    <b>1156902</b><br>
+                                    <font class='boxtitle2'>Seguridad informatica<br>
+                                    horas:3&nbsp;
+                                    Cred:3                                                                                                                <br>Electiva                                                                        </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                 
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Proyecto academico (opcional) -  Prerrequisito:   Cre:150'>
+                                    <b>1156903</b><br>
+                                    <font class='boxtitle2'>Proyecto academico (opcional)<br>
+                                    horas:5&nbsp;
+                                    Cred:15                                                                                                                <br>Electiva                                                                        </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Herramientas tic para gestion de proyectos -  Prerrequisito:  1155805'>
+                                    <b>1156904</b><br>
+                                    <font class='boxtitle2'>Herramientas tic para&#8230;<br>
+                                    horas:3&nbsp;
+                                    Cred:3                                                                                                                <br>Electiva                                                                        </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Auditoria de sistemas -  Prerrequisito:  1155805'>
+                                    <b>1156906</b><br>
+                                    <font class='boxtitle2'>Auditoria de sistemas<br>
+                                    horas:0&nbsp;
+                                    Cred:3                                                                                                                <br>Electiva                                                                        </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Arquitectura dirigida por ontologias -  Prerrequisito:  1155805'>
+                                    <b>1156907</b><br>
+                                    <font class='boxtitle2'>Arquitectura dirigida por&#8230;<br>
+                                    horas:3&nbsp;
+                                    Cred:3                                                                                                                <br>Electiva                                                                        </font>
+                                </span>
+                            </td>
+                                                                                                                                                                            </td>
+                                        </tr>
+                                                                    <th><h5><b>DECIMO<br>SEMESTRE</b></h5></th>
+                            
+                                                                                                                 
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Proyecto de grado -  Prerrequisito:   Cre:100'>
+                                    <b>1156001</b><br>
+                                    <font class='boxtitle2'>Proyecto de grado<br>
+                                    horas:0&nbsp;
+                                    Cred:8                                                                                                            </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Sistemas de informacion empresarial -  Prerrequisito:  1155705'>
+                                    <b>1157001</b><br>
+                                    <font class='boxtitle2'>Sistemas de informacion&#8230;<br>
+                                    horas:3&nbsp;
+                                    Cred:3                                                                                                                <br>Electiva                                                                        </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Redes convergentes -  Prerrequisito:  1155804'>
+                                    <b>1157002</b><br>
+                                    <font class='boxtitle2'>Redes convergentes<br>
+                                    horas:3&nbsp;
+                                    Cred:3                                                                                                                <br>Electiva                                                                        </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Informatica juridica -  Prerrequisito:  1155705'>
+                                    <b>1157003</b><br>
+                                    <font class='boxtitle2'>Informatica juridica<br>
+                                    horas:3&nbsp;
+                                    Cred:3                                                                                                                <br>Electiva                                                                        </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Computacion en la nube -  Prerrequisito:  1155604'>
+                                    <b>1157004</b><br>
+                                    <font class='boxtitle2'>Computacion en la&#8230;<br>
+                                    horas:3&nbsp;
+                                    Cred:3                                                                                                                <br>Electiva                                                                        </font>
+                                </span>
+                            </td>
+                                                                                        
+                                                                                                                                                                         
+                                                        <td align='center'>
+                                <span class='badge hvr-grow-shadow badge_pen td_color2'  
+                                      data-toggle='tooltip' 
+                                      data-placement='top' 
+                                      title='Mineria de datos -  Prerrequisito:  1155606 - 1155605'>
+                                    <b>1157005</b><br>
+                                    <font class='boxtitle2'>Mineria de datos<br>
+                                    horas:3&nbsp;
+                                    Cred:3                                                                                                                <br>Electiva                                                                        </font>
+                                </span>
+                            </td>
+                                                                                            </tbody>
+                </table>
+            </div>            
+        </div>
+    </div>
+                    </section><!-- /.content -->
+    </div><!-- /.content-wrapper -->
+    <footer class="main-footer">
+                División de Sistemas UFPS &copy; 2016. <span class="hidden-xs">Version <b>2.0</b></span>
+    </footer>
+</div><!-- ./wrapper -->
+<script type="text/javascript" src="assets1/js/jquery/jQuery-2.1.3.min.js"></script><script type="text/javascript" src="assets1/js/bootstrap/bootstrap.min.js"></script><script type="text/javascript" src="assets1/js/adminlte/app.min.js"></script>
+</body>
+</html>

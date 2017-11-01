@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="js/sesion.js"></script>
+        <script type="text/javascript" src="js/ruta.js"></script>
+    </head>
+    <body>
+        <div>Login</div>
+        <form id="login-form">
+            <input type="text" placeholder="codigo" id="cod">
+            <input type="text" placeholder="contrasena" id="con">
+            <select id="tip">
+                <option value="1">Profesor</option>
+                <option value="0">Estudiante</option>
+            </select>
+            <button id="login-form-button">Iniciar Sesion</button>
+        </form>
+        <div id="res"></div>
+        <script>
+            var t="";
+            $(document).ready(function () {
+                if(getCookie("user") != ""){
+                    window.location.href = "sesioncorrecta.html"
+                }                
+            });
+
+            $('#login-form').on("submit",function(e){
+                e.preventDefault();                  
+                obtenerRuta("iniciar");           
+                iniciarSesion();
+            });
+
+            function iniciarSesion(){
+                var var1 = $("#cod").val();
+                var var2 = $("#con").val();
+                var var3 = $("#tip").val();
+                window.setTimeout(function(){
+                var s = document.createElement("script");  
+                var parametros = {"cod":var1,"con":var2,"tip":var3};                 
+                s.src = window.t+"?x="+JSON.stringify(parametros);
+                document.body.appendChild(s);
+                }, 600);
+                        
+            }
+
+            function procesar(myObj){
+                if(myObj["error"]==0){
+                    alert("continue");
+                    document.cookie = "user="+myObj["id_user"];
+                    window.location.href = "sesioncorrecta.html";
+                }else if(myObj["error"]==1){
+                    alert("Codigo y contraseña estan mal");
+                }else{
+                    alert("Algo escribiste mal");
+                }
+            }
+
+            
+
+        </script>
+    </body>
+</html>

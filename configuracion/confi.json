@@ -1,0 +1,7 @@
+{
+	"iniciar":"http://localhost/PhpProject1/bd/inicio.php",
+	"registrar":"http://localhost/PhpProject1/bd/Registro.php",
+    "crearmateria":"http://localhost/PhpProject1/bd/crearMaterias.php",
+    "consultarMateria" : "http://localhost/PhpProject1/bd/consultarMaterias.php",
+    "salones" : "http://localhost/PhpProject1/bd/consultarSalones.php"
+}
