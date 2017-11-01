@@ -17,13 +17,15 @@ $misDatos = json_decode($_GET['x'], false);
 
 try {
 
-    $sql = "INSERT INTO `materia`(`codigo`, `nombre`, `profesor_codigo`)
-            VALUES ('${codigo}','${nombre}',${codigo_Usuario})";
+    $sql = "INSERT INTO `materia`(`codigo`, `nombre`)
+            VALUES ('${codigo}','${nombre}')";
 
-   
     $bd = DataBase::insertarConsulta($sql);
 
-    //sleep(1);
+    $sql = "INSERT INTO `usuario_has_materia`(`usuario_codigo`, `materia_codigo`) 
+            VALUES (${codigo_Usuario},${codigo})";
+    
+    $bd = DataBase::insertarConsulta($sql);
 
     $dia = 0;
     $horaInicial = 0;
@@ -35,11 +37,13 @@ try {
                 $dia = $var[0];
                 $horaInicial = $var[1];
                 $totalHoras = $var[2];
+                $salon = $var[3];
                     while ($totalHoras > 0){
                     
-                    $sql = "INSERT INTO `horario`(`dia_id`, `hora_id`, `usuario_codigo`, `materia_codigo`, `isClase`)   "
-                        . "VALUES (${dia},${horaInicial},${codigo_Usuario},'${codigo}',1)";    
-                    $bd = DataBase::insertarConsulta($sql);
+                    $sql = "INSERT INTO `horario`(`dia_id`, `hora_id`,`materia_codigo`, `isClase`,`salon`)   "
+                        . "VALUES (${dia},${horaInicial},'${codigo}',1,${salon})";    
+                    $bd = DataBase::insertarConsulta($sql);                 
+                    
                     $horaInicial++;
                     $totalHoras--;
                     }     
@@ -55,9 +59,10 @@ try {
                 $dia = $var[0];
                 $horaInicial = $var[1];
                 $totalHoras = $var[2];
+                $salon = $var[3];
                 while ($totalHoras > 0){                
-                    $sql = "INSERT INTO `horario`(`dia_id`, `hora_id`, `usuario_codigo`, `materia_codigo`, `isClase`)   "
-                            . "VALUES (${dia},${horaInicial},${codigo_Usuario},'${codigo}',0)";   
+                    $sql = "INSERT INTO `horario`(`dia_id`, `hora_id`,`materia_codigo`, `isClase`,`salon`)   "
+                            . "VALUES (${dia},${horaInicial},'${codigo}',0,${salon})";   
                     $bd = DataBase::insertarConsulta($sql);
                     $horaInicial++;
                     $totalHoras--;

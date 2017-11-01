@@ -18,13 +18,15 @@ $sql = "SELECT `h`.hora_id
 		FROM `horario` `h` 
 		INNER JOIN `materia` `m`
 		ON (`h`.materia_codigo = `m`.codigo)
+		INNER JOIN `usuario_has_materia` `uxm`
+		ON (`m`.codigo = `uxm`.materia_codigo) 
 		INNER JOIN `ejecucion` `e`
 		ON (`h`.id = `e`.horario_id)
 		INNER JOIN `estados` `est`
 		ON (`e`.estado_id = `est`.id)
 		INNER JOIN `salon` `s`
 		ON (`e`.salon_id = `s`.id)   
-		WHERE `h`.`usuario_codigo` = '$codigo'
+		WHERE `uxm`.`usuario_codigo` = '$codigo'
 		ORDER BY dia  
 		ASC"; 
 

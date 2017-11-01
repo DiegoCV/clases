@@ -1,5 +1,5 @@
      function obtenerRuta(ruta){
-         alert(ruta);
+        
                 $.ajax({
                     type: "POST",
                     url: "../configuracion/confi.json",

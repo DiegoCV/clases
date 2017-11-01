@@ -478,7 +478,6 @@
         	<script type="text/javascript">
 
         	var t = "";
-            var salones = "";
 
             $(document).ready(cargarMaterias());
 function cargarMaterias(){
@@ -489,8 +488,9 @@ function cargarMaterias(){
                     var parametros = {"codigo":var1};                 
                     s.src = window.t+"?x="+JSON.stringify(parametros);
                     document.body.appendChild(s);
+                    obtenerSalones();   
                 }, 600); 
-                obtenerSalones();         
+                      
         	}
 function obtenerRuta2(ruta){
          //alert(ruta);
@@ -530,6 +530,13 @@ function obtenerRuta2(ruta){
                 switch(myObj["error"]){
                     case "0":
                         alert("Registro exitoso");
+
+                        /*<button  type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>*/
+                        var btn=document.createElement("BUTTON");
+                        btn.setAttribute("type","button");
+                        btn.setAttribute("class","close");
+                        btn.setAttribute("data-dismiss","modal");
+                        btn.click();
                         cargarMaterias();
                         break;
                     case "1":
@@ -556,8 +563,12 @@ function obtenerRuta2(ruta){
                 }
 
                 function postObtenerSalones(myObjs){
-                   
-                        console.log(myObjs[0]["id"]+"-"+myObjs[0]["codigo"]);
+                   //console.log(myObjs);
+                   /*for(x in myObjs){
+                        console.log(myObjs[x]["codigo"]);
+                      //  console.log(myObjs[0]["id"]+"-"+myObjs[0]["codigo"]);
+                   }*/
+                   arraySalones=myObjs;
                     
                 }
 
@@ -599,13 +610,15 @@ function obtenerRuta2(ruta){
             return horas;
         }
         function agregar_salones(salon) {
-            /*
+            
             for (var i = 0; i < arraySalones.length; i++) {
+                //console.log("hola mundo")
                 var option = document.createElement("option");
-                option.text=arraySalones[i]["nombre"];
+                option.text=arraySalones[i]["codigo"];
                 option.value=arraySalones[i]["id"];
+                salon.appendChild(option);
             }
-            */
+            
             salon.setAttribute("id","salon%"+count);
             
             return salon;
@@ -777,7 +790,7 @@ function obtenerRuta2(ruta){
             return rta;
         }       
         function preparar_datos(div){
-            rta= new Array();
+            rta= "";
             var d=document.getElementById(div);
             var divhijos=d.childNodes;
             for(var i=3;i<divhijos.length;i++){ //mirar en el html, el div se inicializa con text-button-text
