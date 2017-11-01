@@ -17,15 +17,22 @@ $misDatos = json_decode($_GET['x'], false);
 
 try {
 
+    //Inicializa el punto de conexion
+    $conn = DataBase::obtenerConector();
+    // set the PDO error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    //Inicializa la transaccion
+    $conn->beginTransaction();
+
     $sql = "INSERT INTO `materia`(`codigo`, `nombre`)
             VALUES ('${codigo}','${nombre}')";
 
-    $bd = DataBase::insertarConsulta($sql);
+    $bd = DataBase::insertarConsultaTransacional($conn,$sql);
 
     $sql = "INSERT INTO `usuario_has_materia`(`usuario_codigo`, `materia_codigo`) 
             VALUES (${codigo_Usuario},${codigo})";
     
-    $bd = DataBase::insertarConsulta($sql);
+    $bd = DataBase::insertarConsultaTransacional($conn,$sql);
 
     $dia = 0;
     $horaInicial = 0;
@@ -42,7 +49,7 @@ try {
                     
                     $sql = "INSERT INTO `horario`(`dia_id`, `hora_id`,`materia_codigo`, `isClase`,`salon`)   "
                         . "VALUES (${dia},${horaInicial},'${codigo}',1,${salon})";    
-                    $bd = DataBase::insertarConsulta($sql);                 
+                    $bd = DataBase::insertarConsultaTransacional($conn,$sql);                 
                     
                     $horaInicial++;
                     $totalHoras--;
@@ -63,7 +70,7 @@ try {
                 while ($totalHoras > 0){                
                     $sql = "INSERT INTO `horario`(`dia_id`, `hora_id`,`materia_codigo`, `isClase`,`salon`)   "
                             . "VALUES (${dia},${horaInicial},'${codigo}',0,${salon})";   
-                    $bd = DataBase::insertarConsulta($sql);
+                    $bd = DataBase::insertarConsultaTransacional($conn,$sql);
                     $horaInicial++;
                     $totalHoras--;
                 }
@@ -71,11 +78,17 @@ try {
         }                                 
     }
 
+    $conn->commit();
+    $conn = null;
+
     $data = array("error" => "0");
     $json = json_encode($data); 
     echo "postMateria(".$json.");";
 
 } catch (PDOException $e) {
+    $conn->rollBack();
+    $conn = null;
+
     if($e->getCode() == "23000"){
         $data = array("error" => "1");
     }else{

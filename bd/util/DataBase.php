@@ -3,7 +3,7 @@
 * Clase para la persistencia de los datos
 */
 class DataBase {
-
+ 
     public static function obtenerConector(){
         try{
             $ini_array = parse_ini_file('/../../configuracion/config.ini');
@@ -40,6 +40,13 @@ class DataBase {
         $sentencia->execute(); 
         $sentencia = null;
         $conn = null;
+    }
+
+    public static function insertarConsultaTransacional($conn,$sql){
+        //Primero prepara la sentencia y eso es lo que ejecuta
+        $sentencia=$conn->prepare($sql);
+        $sentencia->execute(); 
+        $sentencia = null;
     }
 
 }
