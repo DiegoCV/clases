@@ -1,5 +1,5 @@
 {
-	"iniciar":"http://localhost/clases/bd/inicio.php",
+	"iniciar":"http://localhost/clase/bd/inicio.php",
 	"registrar":"http://localhost/clases/bd/Registro.php",
     "crearmateria":"http://localhost/clases/bd/crearMaterias.php",
     "consultarMateria":"http://localhost/clases/bd/consultarMaterias.php",
