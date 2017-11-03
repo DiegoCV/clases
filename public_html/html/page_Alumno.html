@@ -309,7 +309,7 @@
                             <div class="modal-footer"> 
                                 <br>
                                 <button type="button" class="btn btn-danger btn-custom waves-effect waves-light"  data-dismiss="modal">Cerrar</button> 
-                                <button type="button" class="btn btn-danger waves-effect waves-light">Registrar</button> 
+                                <button type="button" class="btn btn-danger waves-effect waves-light" onclick="insertarMateria()">Registrar</button> 
                             </div> 
                         </div> 
                         
@@ -336,7 +336,7 @@
                                                 <div class="form-group"> 
                                                     <label for="field-1" class="control-label">Codigo</label> 
                                                     <input type="text" class="form-control" id="codigo" placeholder="1151XXX"> 
-                                                </div> 
+                                                </div>
                                             </div> 
                                            <!-- <div class="col-md-6"> 
                                                 <div class="form-group"> 
@@ -488,6 +488,46 @@ function obtenerRuta2(ruta){
                    arraySalones=myObjs;
                     
                 }
+
+
+////////////////////////////////////////////////////////////////////////////////
+/*
+                    METODO PARA REGISTAR MATERIAS
+*/
+
+                function insertarMateria(){
+                    obtenerRuta2("insertar");
+                    var var1 = $('#codigo').val();
+                    var var2 = getCookie("user");
+
+                    var parametros = {"codigoUsuario": var2,"codigo":var1};
+
+                    window.setTimeout(function(){
+                        var s = document.createElement("script");                   
+                        s.src = window.t+"?x="+JSON.stringify(parametros);
+                        document.body.appendChild(s);
+                    },600)
+
+
+                }
+
+                function postInsertarMateria(myObj){
+                    switch(myObj["error"]){
+                        case "0" :
+                            alert("Registro exitoso");
+                        break;
+
+                        case "1":
+                        alert("Esta materia se encuentra registrada");
+                        break;
+
+                        default:
+
+                        alert("Tienes problemas, podriamos ayudarte, pero no queremos");
+
+                    }
+                }
+
 
 /////////////////////////////////////////////////////////////////////////////
 /*                  NO MIRAR ARRIBA

@@ -8,9 +8,9 @@ $misDatos = json_decode($_GET['x'], false);
     $nombre = trim($misDatos->nombre);
     $codigo = trim($misDatos->codigo);
     $clases = trim($misDatos->clases);
-        $array_clases = split("w", $clases);
+        $array_clases = explode("w", $clases);
     $asesorias = trim($misDatos->asesorias);
-        $array_asesorias = split("w", $asesorias);
+        $array_asesorias = explode("w", $asesorias);
         
         
 
@@ -30,7 +30,7 @@ try {
     $bd = DataBase::insertarConsultaTransacional($conn,$sql);
 
     $sql = "INSERT INTO `usuario_has_materia`(`usuario_codigo`, `materia_codigo`) 
-            VALUES (${codigo_Usuario},${codigo})";
+            VALUES ('${codigo_Usuario}','${codigo}')";
     
     $bd = DataBase::insertarConsultaTransacional($conn,$sql);
 
@@ -40,7 +40,7 @@ try {
     if (sizeof($array_clases) > 0) {
         foreach ($array_clases as $valor) {
             if($valor != ""){
-                $var = split("z",$valor);
+                $var = explode("z",$valor);
                 $dia = $var[0];
                 $horaInicial = $var[1];
                 $totalHoras = $var[2];
@@ -62,7 +62,7 @@ try {
     if (sizeof($array_asesorias) > 0) {
         foreach ($array_asesorias as $valor) {
            if($valor != ""){
-                $var = split("z",$valor);
+                $var = explode("z",$valor);
                 $dia = $var[0];
                 $horaInicial = $var[1];
                 $totalHoras = $var[2];
@@ -90,7 +90,7 @@ try {
     $conn = null;
 
     if($e->getCode() == "23000"){
-        $data = array("error" => "1");
+        $data = array("error" => "1","mensaje"=>$sql.$e->getMessage());
     }else{
         $data = array("error" => "2", "mensaje"=>$sql.$e->getMessage());
     }

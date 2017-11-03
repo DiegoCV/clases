@@ -256,8 +256,7 @@
             function iniciarSesion(){
                 var var1 = $("#cod").val();
                 var var2 = $("#con").val();
-                var var3 = $("#tip").val();
-                alert(var2);
+                var var3 = $("#tip").val();               
                 window.setTimeout(function(){
                 var s = document.createElement("script");  
                 var parametros = {"cod":var1,"con":var2,"tip":var3};                 
@@ -291,15 +290,27 @@
 
 
             function procesar(myObj){
-                if(myObj["error"]==0){                   
-                    document.cookie = "user="+myObj["id_user"];
-                    document.cookie = "tipo="+myObj["tipo"];
-                    redireccionar(myObj["tipo"]);
-                }else if(myObj["error"]==1){
-                    alert("Alguna de las credenciales debe estar mal");
-                }else{
-                    alert("Creo que tienes problemas");
+                alert("ald");
+                switch(myObj["error"]){
+                    case "0":
+                         document.cookie = "user="+myObj["id_user"];
+                        document.cookie = "tipo="+myObj["tipo"];
+                        redireccionar(myObj["tipo"]);
+                    break;
+                    case "1":
+                        alert("Alguna de las credenciales debe estar vacia");
+                    break;
+                    case "2":
+                        alert("Alguna de las credenciales debe estar mal");
+                    break;
+                    case "4":
+                    alert("Usuario no registrado");
+                    break;
+                    default:
+                        alert("Ah ocurrido un problema, intentelo nuevamente.  ");
                 }
+
+               
             }   
 
             function procesarRegistro(res){
@@ -314,4 +325,3 @@
 	</body>
 
 <!-- Mirrored from moltran.coderthemes.com/dark/pages-login.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Sep 2017 02:42:19 GMT -->
-</html>
