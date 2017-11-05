@@ -10,32 +10,44 @@ $codigo = trim($setInfo->cod);
 $contrasena = trim($setInfo->con);
 $tipo = $setInfo->tip;
 
- if (($codigo!='')&&($contrasena!='')) {
+try{
 
-    $sql = "SELECT `codigo`, `clave`, `isProfesor`,`nombre`          
-            FROM `usuario` 
-            WHERE `codigo`= '$codigo' 
-            AND `isProfesor`='$tipo' ";
-    
-    $data = DataBase::ejecutarConsulta($sql);          
-             
+
+    if (($codigo!='')&&($contrasena!='')) {
+
+        $sql = "SELECT `codigo`, `clave`, `isProfesor`,`nombre`          
+                FROM `usuario` 
+                WHERE `codigo`= '$codigo' 
+                AND `isProfesor`='$tipo' ";
+        
+        $data = DataBase::ejecutarConsulta($sql);   
+
+        if(empty($data)){
+             $data = array("error" => "4");
+                    $json = json_encode($data); 
+        }else{
             if($data[0]['clave'] == $contrasena) {                                       
                 $id_user = $data[0]['codigo'];
                 $username = $data[0]['nombre'];
                 $data = array("id_user" => $id_user, "username" => $username,"tipo" => $tipo, "error" => "0");
-                $json = json_encode($data);             
-                 
-            
+                $json = json_encode($data);                
             }else{
  
                 $data = array("error" => "2");
                 $json = json_encode($data); 
             }
-        }else{
- 
-                $data = array("error" => "1");
-                $json = json_encode($data); 
-        }
-        echo "procesar(" . $json . ");";    
 
+        }
+    }else{ 
+        $data = array("error" => "1");
+        $json = json_encode($data); 
+    }
+        echo "procesar(" . $json . ");";    
+}catch(PDOException $e){
+    
+        $data = array("error" => "3");
+        $json = json_encode($data); 
+
+        echo "procesar(" . $json . ");"; 
+}
 ?>

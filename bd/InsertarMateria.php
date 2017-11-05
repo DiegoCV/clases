@@ -12,7 +12,7 @@ $misDatos = json_decode($_GET['x'], false);
 try {
 
     $sql = "INSERT INTO `usuario_has_materia`(`usuario_codigo`, `materia_codigo`) 
-            VALUES (${codigo_Usuario},${codigo})";
+            VALUES ('${codigo_Usuario}','${codigo}')";
 
    
     $bd = DataBase::insertarConsulta($sql);
