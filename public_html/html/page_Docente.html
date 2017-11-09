@@ -160,7 +160,7 @@
                         </table>
 
                         <button type="button" class="btn btn-block btn--md btn-danger waves-effect waves-light" data-toggle="modal" data-target="#con-close-modal">Agregar materia</button>
-                        <button type="button" class="btn btn-block btn--md btn-danger waves-effect waves-light" data-toggle="modal" data-target="#con-close-modal-1">Eliminar materia</button>
+                        <button onclick="agregar_materias()" type="button" class="btn btn-block btn--md btn-danger waves-effect waves-light" data-toggle="modal" data-target="#con-close-modal-1">Eliminar materia</button>
                         <br>
                         
                         <!--<span class="dropcap text-danger">¿Puede haber algo aquí?</span>-->
@@ -281,7 +281,7 @@
                         <div class="modal-content"> 
                             
                             <div class="modal-header"> 
-                                <button  type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> 
+                                <button id="cerrarRegistrar" type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> 
                                 <h4 class="modal-title">Registrar Materias</h4> 
                             </div> 
                             
@@ -350,7 +350,7 @@
                         <form id="myForm" metod="post">
                             <div class="modal-content"> 
                                 <div class="modal-header"> 
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> 
+                                    <button id="cerrarElminar" type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> 
                                     <h4 class="modal-title">Eliminar de Materias</h4> 
                                 </div> 
                                 <div class="modal-body"> 
@@ -358,9 +358,9 @@
                                     <div>
                                         <div class="row"> 
                                             <div class="col-md-12"> 
-                                                <div class="form-group"> 
+                                                <div id="divEliminar" class="form-group"> 
                                                     <label for="field-1" class="control-label">Codigo</label> 
-                                                    <input type="text" class="form-control" id="codigo" placeholder="1151XXX"> 
+                                                    <!--<select class="form-control" id="codigoEliminar">--> </select>
                                                 </div> 
                                             </div> 
                                            <!-- <div class="col-md-6"> 
@@ -378,7 +378,7 @@
                                 <br>
                                <!-- <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cerrar</button> -->
                                 <button type="button" class="btn btn-danger btn-custom waves-effect waves-light" data-dismiss="modal">Cerrar</button> 
-                                <button type="button" class="btn btn-danger waves-effect waves-light">Eliminar</button> 
+                                <button onclick="eliminarMateria()" type="button" class="btn btn-danger waves-effect waves-light">Eliminar</button> 
                             </div> 
                         </div> 
                         
@@ -530,17 +530,11 @@ function obtenerRuta2(ruta){
                 switch(myObj["error"]){
                     case "0":
                         alert("Registro exitoso");
-
-                        /*<button  type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>*/
-                        var btn=document.createElement("BUTTON");
-                        btn.setAttribute("type","button");
-                        btn.setAttribute("class","close");
-                        btn.setAttribute("data-dismiss","modal");
-                        btn.click();
+                        document.getElementById("cerrarRegistrar").click();
                         cargarMaterias();
                         break;
                     case "1":
-                        alert("Ya existe una materia con ese codigo");
+                        alert("La cabeza de alguien rodará por esta indiscreción");
                         break;
                     default:
                         alert("Al parecer tienes problemas, buena suerte con eso");
@@ -572,6 +566,64 @@ function obtenerRuta2(ruta){
                     
                 }
 
+/////////////////////////////////////////////////////////////////////////////
+/*                  ELIMINAR
+                */
+function agregar_materias() {
+            var ant=document.getElementById("codigoEliminar");
+            var div=document.getElementById("divEliminar");
+            if(ant!=null){
+            div.removeChild(ant);
+            }
+            var m=document.createElement("SELECT");//getElementById("codigoEliminar");
+            //console.log("hola mundo");
+            m.setAttribute("id","codigoEliminar");
+            for (var i = 0; i < m.length; i++) {
+                m.remove(i);
+                console.log("limpiar");
+            }
+            for (var i = 0; i < arrayMaterias.length; i++) {
+                console.log("hola mundo");
+                var option = document.createElement("option");
+                option.text=arrayMaterias[i]["materia"];
+                option.value=arrayMaterias[i]["codigo"];
+                m.appendChild(option);
+            }
+            div.appendChild(m);
+        }
+
+
+
+            function eliminarMateria(){
+                var codMat = document.getElementById("codigoEliminar").value;
+                var codUsr = getCookie("user");
+                var parametros = {
+                    codigoUsuario: codUsr,
+                    codigo : codMat
+                };
+                 obtenerRuta2("eliminar");
+                    window.setTimeout(function(){
+                        var s = document.createElement("script");                   
+                        s.src = window.t+"?x="+JSON.stringify(parametros);
+                        document.body.appendChild(s);
+                    },600);
+            }
+            function postElimMateria(myObj){
+                console.log(myObj["error"]+myObj["mensaje"]);
+                switch(myObj["error"]){
+                    case "0":
+                        alert("Eliminado con éxito");
+                        document.getElementById("cerrarElminar").click();
+                        cargarMaterias();
+                        break;
+                    case "1":
+                        alert("Creo que ni el diablo conoce esa materia");
+                        break;
+                    default:
+                        alert("Al parecer tienes problemas, buena suerte con eso");
+                }
+                pintarTODO();
+            }
 /////////////////////////////////////////////////////////////////////////////
 /*                  NO MIRAR ARRIBA
                 ESTO ES AGREGAR MATERIA
@@ -950,7 +1002,10 @@ function getMateria(dia,hora,sumar){
 function mostrarNombre(nombre){
     document.getElementById('codigoClaseModalC').innerText="-Estudias "+nombre+"? creí que sólo eras vago. -Corrección: "+nombre+" y vago";
 }
-
+function pintarTODO(){
+    pintarTablaPrincipal(-1);
+    siguienteClase();
+}
 	function siguienteClase(){
 		var date = new Date();
 		var h=date.getHours();

@@ -4,5 +4,7 @@
     "crearmateria":"http://localhost/clases/bd/crearMaterias.php",
     "consultarMateria":"http://localhost/clases/bd/consultarMaterias.php",
     "salones" : "http://localhost/clases/bd/consultarSalones.php",
-    "insertar": "http://localhost/clases/bd/InsertarMateria.php"
+    "insertar": "http://localhost/clases/bd/InsertarMateria.php",
+    "eliminar": "http://localhost/clases/bd/eliminarMateria.php",
+    "eliminarAlumno": "http://localhost/clases/bd/eliminarMateriaAlumno.php"
 }
