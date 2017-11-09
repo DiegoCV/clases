@@ -15,15 +15,11 @@
 	    //Inicializa la transaccion
 	    $conn->beginTransaction();
 
-    	/*$sql = "DELETE FROM `usuario_has_materia` 
+    	$sql = "DELETE FROM `usuario_has_materia` 
     			WHERE `materia_codigo`='${codigo}' ";
 
     	$bd = DataBase::insertarConsultaTransacional($conn,$sql);
-*/
-    	$sql = "DELETE FROM `materia` 
-    			WHERE `codigo` = '${codigo}'";
 
-    	$bd = DataBase::insertarConsultaTransacional($conn,$sql);
 
     	$conn->commit();
     	$conn = null;

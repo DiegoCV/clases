@@ -48,7 +48,7 @@ try {
                     while ($totalHoras > 0){
                     
                     $sql = "INSERT INTO `horario`(`dia_id`, `hora_id`,`materia_codigo`, `isClase`,`salon`)   "
-                        . "VALUES (${dia},${horaInicial},'${codigo}',1,${salon})";    
+                        . "VALUES (${dia},${horaInicial},'${codigo}','1','${salon}')";    
                     $bd = DataBase::insertarConsultaTransacional($conn,$sql);                 
                     
                     $horaInicial++;
@@ -69,7 +69,7 @@ try {
                 $salon = $var[3];
                 while ($totalHoras > 0){                
                     $sql = "INSERT INTO `horario`(`dia_id`, `hora_id`,`materia_codigo`, `isClase`,`salon`)   "
-                            . "VALUES (${dia},${horaInicial},'${codigo}',0,${salon})";   
+                            . "VALUES (${dia},${horaInicial},'${codigo}','0','${salon}')";   
                     $bd = DataBase::insertarConsultaTransacional($conn,$sql);
                     $horaInicial++;
                     $totalHoras--;

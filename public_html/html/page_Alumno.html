@@ -160,7 +160,7 @@
                         </table>
 
                         <button type="button" class="btn btn-block btn--md btn-danger waves-effect waves-light" data-toggle="modal" data-target="#con-close-modal">Agregar materia</button>
-                        <button type="button" class="btn btn-block btn--md btn-danger waves-effect waves-light" data-toggle="modal" data-target="#con-close-modal-1">Eliminar materia</button>
+                        <button onclick="agregar_materias()" type="button" class="btn btn-block btn--md btn-danger waves-effect waves-light" data-toggle="modal" data-target="#con-close-modal-1">Eliminar materia</button>
                         <br>
                         
                         <!--<span class="dropcap text-danger">¿Puede haber algo aquí?</span>-->
@@ -281,7 +281,7 @@
                         <form id="myForm" metod="post">
                             <div class="modal-content"> 
                                 <div class="modal-header"> 
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> 
+                                    <button id="cerrarRegistrar" type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> 
                                     <h4 class="modal-title">Registro de Materias</h4> 
                                 </div> 
                                 <div class="modal-body"> 
@@ -320,12 +320,12 @@
 
            <!-----------------------------Modal eliminar Materias---------------------------------------->
            
-               <div id="con-close-modal-1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none">
+                <div id="con-close-modal-1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none">
                     <div class="modal-dialog"> 
                         <form id="myForm" metod="post">
                             <div class="modal-content"> 
                                 <div class="modal-header"> 
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> 
+                                    <button id="cerrarElminar" type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> 
                                     <h4 class="modal-title">Eliminar de Materias</h4> 
                                 </div> 
                                 <div class="modal-body"> 
@@ -333,10 +333,10 @@
                                     <div>
                                         <div class="row"> 
                                             <div class="col-md-12"> 
-                                                <div class="form-group"> 
+                                                <div id="divEliminar" class="form-group"> 
                                                     <label for="field-1" class="control-label">Codigo</label> 
-                                                    <input type="text" class="form-control" id="codigo" placeholder="1151XXX"> 
-                                                </div>
+                                                    <!--<select class="form-control" id="codigoEliminar">--> </select>
+                                                </div> 
                                             </div> 
                                            <!-- <div class="col-md-6"> 
                                                 <div class="form-group"> 
@@ -353,15 +353,13 @@
                                 <br>
                                <!-- <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cerrar</button> -->
                                 <button type="button" class="btn btn-danger btn-custom waves-effect waves-light" data-dismiss="modal">Cerrar</button> 
-                                <button type="button" class="btn btn-danger waves-effect waves-light">Eliminar</button> 
+                                <button onclick="eliminarMateria()" type="button" class="btn btn-danger waves-effect waves-light">Eliminar</button> 
                             </div> 
                         </div> 
                         
                         </form>
                     </div>
                 </div><!-- /.modal -->
-           
-           <!-----------------------------Modal eliminar Materias---------------------------------------->
 
            
 
@@ -506,7 +504,7 @@ function obtenerRuta2(ruta){
                         var s = document.createElement("script");                   
                         s.src = window.t+"?x="+JSON.stringify(parametros);
                         document.body.appendChild(s);
-                    },600)
+                    },600);
 
 
                 }
@@ -515,6 +513,7 @@ function obtenerRuta2(ruta){
                     switch(myObj["error"]){
                         case "0" :
                             alert("Registro exitoso");
+                            
                         break;
 
                         case "1":
@@ -526,9 +525,67 @@ function obtenerRuta2(ruta){
                         alert("Tienes problemas, podriamos ayudarte, pero no queremos");
 
                     }
+                document.getElementById("cerrarRegistrar").click();
                 }
 
+/////////////////////////////////////////////////////////////////////////////
+/*                  ELIMINAR
+                */
+function agregar_materias() {
+            var ant=document.getElementById("codigoEliminar");
+            var div=document.getElementById("divEliminar");
+            if(ant!=null){
+            div.removeChild(ant);
+            }
+            var m=document.createElement("SELECT");//getElementById("codigoEliminar");
+            //console.log("hola mundo");
+            m.setAttribute("id","codigoEliminar");
+            for (var i = 0; i < m.length; i++) {
+                m.remove(i);
+                console.log("limpiar");
+            }
+            for (var i = 0; i < arrayMaterias.length; i++) {
+                console.log("hola mundo");
+                var option = document.createElement("option");
+                option.text=arrayMaterias[i]["materia"];
+                option.value=arrayMaterias[i]["codigo"];
+                m.appendChild(option);
+            }
+            div.appendChild(m);
+        }
 
+
+
+            function eliminarMateria(){
+                var codMat = document.getElementById("codigoEliminar").value;
+                var codUsr = getCookie("user");
+                var parametros = {
+                    codigoUsuario: codUsr,
+                    codigo : codMat
+                };
+                 obtenerRuta2("eliminarAlumno");
+                    window.setTimeout(function(){
+                        var s = document.createElement("script");                   
+                        s.src = window.t+"?x="+JSON.stringify(parametros);
+                        document.body.appendChild(s);
+                    },600);
+            }
+            function postElimMateria(myObj){
+                console.log(myObj["error"]+myObj["mensaje"]);
+                switch(myObj["error"]){
+                    case "0":
+                        alert("Eliminado con éxito");
+                        document.getElementById("cerrarElminar").click();
+                        cargarMaterias();
+                        break;
+                    case "1":
+                        alert("La cabeza de alguien rodará por esta indiscreción");
+                        break;
+                    default:
+                        alert("Al parecer tienes problemas, buena suerte con eso");
+                }
+                pintarTODO();
+            }
 /////////////////////////////////////////////////////////////////////////////
 /*                  NO MIRAR ARRIBA
                 ESTO ES AGREGAR MATERIA
@@ -937,6 +994,12 @@ function mostrarNombre(nombre){
                 }
         }
 	}
+    function pintarTODO(){
+       // console.log("pintarTODO");
+    pintarTablaPrincipal(-1);
+    siguienteClase();
+    window.location.href = "page_Alumno.html";
+}
     function pintarSiguienteMateria(dia,hora){
        var hs= document.getElementById("HS");
        var ds= document.getElementById("DS");
