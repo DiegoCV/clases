@@ -3,5 +3,6 @@
 	"registrar":"http://localhost/clases/bd/Registro.php",
     "crearmateria":"http://localhost/clases/bd/crearMaterias.php",
     "consultarMateria":"http://localhost/clases/bd/consultarMaterias.php",
-    "salones" : "http://localhost/clases/bd/consultarSalones.php"
+    "salones" : "http://localhost/clases/bd/consultarSalones.php",
+    "insertar": "http://localhost/clases/bd/InsertarMateria.php"
 }
